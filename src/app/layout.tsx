@@ -1,9 +1,6 @@
 import "./globals.css";
 
 
-
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -11,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body  className="h-screen">{children}</body>
+      <body className="h-full min-h-screen">{children}</body>
     </html>
   );
 }
