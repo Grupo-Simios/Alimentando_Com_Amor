@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.Images {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.Images div{
+  color: #FF9F1C;
+
+}
+
+.Images div::after{
+    font-size: 30px;
+
+
+}
+
+@media (max-width: 480px) {
+
+    .Images div::after{
+    display: none;
+
+
+}
+}
+
+
+.Images img {
+  width: 300px;
+  margin: auto auto;
+  border-radius: 8px;
+}
