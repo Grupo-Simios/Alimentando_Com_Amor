@@ -1,5 +1,10 @@
-import "./globals.css";
 
+
+import "./globals.css";
+import Link from "next/link";
+import { ZillaFont } from "../../Assets/fonts";
+//componente Export
+import { NavBarTop } from "../../Assets/components/nav-bar-top";
 
 export default function RootLayout({
   children,
@@ -7,8 +12,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className="h-full min-h-screen">{children}</body>
+    <html lang="pt-br" className={`${ZillaFont.className}`}>
+      <body className="h-full min-h-screen">
+        
+        <NavBarTop />
+        
+        {children}
+      </body>
     </html>
   );
 }
