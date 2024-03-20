@@ -2,6 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+
+  ? create of tailwind color variable [✅]
+  ? create nav bar Ui Style [✅]
+  by: Dinho 19/03/2024
+
+*/
+
+
+/* Navbar style */
+@layer navigation-bar {
+
+  .nav-bar-top {
+    @apply h-14 w-[100%] 
+   justify-between items-center 
+    text-base font-semibold
+    px-[50px]
+    bg-navbar-Yellow
+    hidden
+    lg:flex
+  }
+
+
+  .nav-bar-ul{
+    @apply 
+    flex
+    border
+    h-full
+    gap-4
+  }
+
+  li{
+    @apply
+    w-32 flex flex-col 
+    justify-center 
+    text-center
+    
+
+  }
+
+  .select-nav-items{
+    @apply
+    bg-navbar-newblue
+    text-white
+    rounded-b-[8px]
+   
+  }
+
+}
+
+
+
 .Images {
   display: flex;
   width: 100%;
@@ -25,8 +77,6 @@
 
     .Images div::after{
     display: none;
-
-
 }
 }
 
@@ -36,3 +86,4 @@
   margin: auto auto;
   border-radius: 8px;
 }
+
