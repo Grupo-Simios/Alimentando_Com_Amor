@@ -9,6 +9,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
+      colors: {
+
+        // creation of tailwind color variable
+        "navbar-Yellow": "#FFBF69",
+        "navbar-pinkBackground": "#FFDDE1",
+        "navbar-newblue": "#114B5F"
+      }
       
     },
     screens: {
