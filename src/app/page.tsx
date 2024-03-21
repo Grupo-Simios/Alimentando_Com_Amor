@@ -1,4 +1,4 @@
-import { Home } from "../../Assets/pages/Home";
+import { Home } from "../components/home.collection/home";
 import "./globals.css";
 
 
@@ -6,8 +6,11 @@ import "./globals.css";
 
 export default function Page() {
   return (
-    <main className="h-full min-h-screen bg-[#e6e6e6]">
+    <>
+      <main className="h-full min-h-screen bg-[#e6e6e6]">
       <Home />
     </main>
+    </>
+  
   );
 }
