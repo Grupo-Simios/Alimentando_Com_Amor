@@ -1,6 +1,6 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { ZillaFont, outfitFont } from "../../../fonts";
+import { ZillaFont, outfitFont } from "../../../tailwindcssStyle/fonts";
 
 export const FooterMobile = () => {
   return (

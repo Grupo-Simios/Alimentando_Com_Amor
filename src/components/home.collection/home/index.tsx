@@ -2,9 +2,9 @@
 
 import { IoIosMenu } from "react-icons/io";
 import { FaArrowTurnDown } from "react-icons/fa6";
-import { ZillaFont, outfitFont } from "../../../../Assets/fonts";
+import { ZillaFont, outfitFont } from "../../tailwindcssStyle/fonts";
 
-import { FooterMobile } from "../../../../Assets/components/Footer/Mobile";
+import { FooterMobile } from "../../footer.collection/footer/mobile";
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";

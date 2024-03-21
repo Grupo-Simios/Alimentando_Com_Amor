@@ -2,9 +2,9 @@
 
 import "./globals.css";
 import Link from "next/link";
-import { ZillaFont } from "../../Assets/fonts";
+import { ZillaFont } from "../components/tailwindcssStyle/fonts";
 //componente Export
-import { NavBarTop } from "../../Assets/components/nav-bar-top";
+import { NavBarTop } from "../components/nav-bar.collection";
 
 export default function RootLayout({
   children,
