@@ -12,6 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+   <>
     <html lang="pt-br" className={`${ZillaFont.className}`}>
       <body className="h-full min-h-screen">
         
@@ -20,5 +21,6 @@ export default function RootLayout({
         {children}
       </body>
     </html>
+   </>
   );
 }
