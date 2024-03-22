@@ -1,0 +1,16 @@
+/* image importing */
+
+
+
+@layer reponsiveSizeMd {
+
+  .heroSectionhome{
+    @apply
+    w-screen
+    border
+    bg-cover
+    bg-center
+   
+  }
+
+}

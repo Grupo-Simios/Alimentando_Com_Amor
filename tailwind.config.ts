@@ -15,7 +15,8 @@ const config: Config = {
         // creation of tailwind color variable
         "navbar-Yellow": "#FFBF69",
         "navbar-pinkBackground": "#FFDDE1",
-        "navbar-newblue": "#114B5F"
+        "navbar-newblue": "#114B5F",
+        "yellow-primary": "#FF9F1C"
       }
       
     },

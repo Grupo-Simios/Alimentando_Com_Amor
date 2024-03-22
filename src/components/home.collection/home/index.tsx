@@ -2,7 +2,10 @@
 
 import { IoIosMenu } from "react-icons/io";
 import { FaArrowTurnDown } from "react-icons/fa6";
-import { ZillaFont, outfitFont } from "../../tailwindcssStyle/fonts";
+
+// style imports
+import { ZillaFont, outfitFont } from "@/assets/fonts/index";
+import reponsiveSizeMd from '@/components/home.collection/style/responsive/md-768/md.module.css'
 
 import { FooterMobile } from "../../footer.collection/footer/mobile";
 
@@ -27,7 +30,11 @@ export const Home = () => {
 
   return (
     <>
-      <header className="flex  w-[100%] ml-auto h-28 justify-end relative  px-2 pt-10">
+
+  {/* start - hero section */}
+  
+<section className="md:hidden">
+<header className="home-logo-name flex  w-[100%] ml-auto h-28 justify-end relative  px-2 pt-10">
         <h1
           className={`${ZillaFont.className} uppercase absolute flex  flex-col items-center top-10 bottom-0 right-0 left-0 text-3xl `}
         >
@@ -79,6 +86,8 @@ export const Home = () => {
             </a>
           </div>
 
+
+
           <div className="flex gap-5 w-[90%] items-center justify-center">
             <span
               className={`${ZillaFont.className} font-black text-xl leading-6 text-[#1b1b1bcc]`}
@@ -95,6 +104,27 @@ export const Home = () => {
           </div>
         </article>
       </section>
+</section>
+
+
+<section className="bg-[url('https://i.imgur.com/G8Q9i5g.png')] h-[609px]">
+      <section className="border-8 border-[#1B1B1B8c] w-1/2  p-8 flex flex-col gap-8 h-60 text-center items-center">
+        <h1 className="text-4xl font-[inter] ">ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span></h1>
+        <h3 className="text-2xl">Distribuição de cestas básicas e marmitas
+          para pessoas vulneráveis ou em situação de rua</h3>
+
+
+      </section>
+
+      <div className="flex gap-8  w-1/2  text-xl font-semibold text-[1B1B1B] mt-12">
+            <span>ações voluntárias</span>
+            <span>kits de higiene feminina</span>
+            <span>brinquedos para as crianças</span>
+          </div>
+</section>
+
+
+
 
       <section className="flex gap-8 py-12 px-5 flex-col w-full bg-[#FFBF69]">
         <article className="flex flex-col gap-6">

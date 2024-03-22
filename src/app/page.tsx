@@ -9,6 +9,7 @@ export default function Page() {
     <>
       <main className="h-full min-h-screen bg-[#e6e6e6]">
       <Home />
+      
     </main>
     </>
   
