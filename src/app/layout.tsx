@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ZillaFont } from "@/assets/fonts/index";
 //componente Export
 import { NavBarTop } from "../components/nav-bar.collection/nav-bar";
+import { CallToActionButton } from "@/components/calltoaction.collection/button";
+import { FooterMobile } from "@/components/footer.collection/footer/mobile";
 
 export default function RootLayout({
   children,
@@ -18,6 +20,8 @@ export default function RootLayout({
         
         <NavBarTop />
         {children}
+        <FooterMobile />
+
       </body>
     </html>
    </>
