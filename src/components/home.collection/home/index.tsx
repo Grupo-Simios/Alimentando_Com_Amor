@@ -2,6 +2,7 @@
 
 import { IoIosMenu } from "react-icons/io";
 import { FaArrowTurnDown } from "react-icons/fa6";
+import Link from "next/link";
 
 // style imports
 import { ZillaFont, outfitFont } from "@/assets/fonts/index";
@@ -30,101 +31,120 @@ export const Home = () => {
 
   return (
     <>
+      {/* start - hero section */}
 
-  {/* start - hero section */}
-  
-<section className="md:hidden">
-<header className="home-logo-name flex  w-[100%] ml-auto h-28 justify-end relative  px-2 pt-10">
-        <h1
-          className={`${ZillaFont.className} uppercase absolute flex  flex-col items-center top-10 bottom-0 right-0 left-0 text-3xl `}
-        >
-          Alimentando <br />
-          <span className="uppercase text-[#FF9F1C]">com amor</span>
-        </h1>
-        <IoIosMenu size={"32px"} />
-      </header>
-      <section className="flex mt-10 h-[710px] gap-10 flex-col  items-center">
-        <article className="flex py-4 w-[90%] flex-col border-4 border-[#1b1b1bcc] items-center gap-4 ">
-          <span
-            className={`${outfitFont.className} text-[#114b5f] text-xl leading-6 font-black`}
+      <section className="md:hidden">
+        <header className="home-logo-name flex  w-[100%] ml-auto h-28 justify-end relative  px-2 pt-10">
+          <h1
+            className={`${ZillaFont.className} uppercase absolute flex  flex-col items-center top-10 bottom-0 right-0 left-0 text-3xl `}
           >
-            ações voluntárias
-          </span>
-          <span
-            className={`${outfitFont.className} text-[#114b5f] text-xl leading-6 font-black`}
+            Alimentando <br />
+            <span className="uppercase text-[#FF9F1C]">com amor</span>
+          </h1>
+          <IoIosMenu size={"32px"} />
+        </header>
+        <section className="flex mt-10 h-[710px] gap-10 flex-col  items-center">
+          <article className="flex py-4 w-[90%] flex-col border-4 border-[#1b1b1bcc] items-center gap-4 ">
+            <span
+              className={`${outfitFont.className} text-[#114b5f] text-xl leading-6 font-black`}
+            >
+              ações voluntárias
+            </span>
+            <span
+              className={`${outfitFont.className} text-[#114b5f] text-xl leading-6 font-black`}
+            >
+              kits de higiene feminina
+            </span>
+            <span
+              className={`${outfitFont.className} text-[#114b5f] text-xl leading-6 font-black`}
+            >
+              brinquedos para as crianças
+            </span>
+          </article>
+          <p
+            className={`${ZillaFont.className} text-xl leading-6 font-normal flex w-[90%] text-center justify-center`}
           >
-            kits de higiene feminina
-          </span>
-          <span
-            className={`${outfitFont.className} text-[#114b5f] text-xl leading-6 font-black`}
-          >
-            brinquedos para as crianças
-          </span>
-        </article>
-        <p
-          className={`${ZillaFont.className} text-xl leading-6 font-normal flex w-[90%] text-center justify-center`}
-        >
-          Distribuição de cestas básicas e<br /> marmitas para pessoas
-          vulneráveis ou <br />
-          em situação de rua
-        </p>
-        <article className="flex flex-col h-full  w-full justify-around items-center">
-          <div className="flex flex-col gap-10 items-center">
-            <a
-              href="#"
-              className={`${outfitFont.className} font-black
+            Distribuição de cestas básicas e<br /> marmitas para pessoas
+            vulneráveis ou <br />
+            em situação de rua
+          </p>
+          <article className="flex flex-col h-full  w-full justify-around items-center">
+            <div className="flex flex-col gap-10 items-center">
+              <a
+                href="#"
+                className={`${outfitFont.className} font-black
               text-5 text-xl py-3 px-20 text-[#f5f5f5] bg-[#FF9F1C] rounded-lg`}
+              >
+                Ajude-nos
+              </a>
+              <a
+                href="#"
+                className={`${outfitFont.className} font-black
+              text-5 text-xl py-3 px-10 border-2 border-[#FF9F1C]  rounded-lg`}
+              >
+                Conheça o projeto
+              </a>
+            </div>
+
+            <div className="flex gap-5 w-[90%] items-center justify-center">
+              <span
+                className={`${ZillaFont.className} font-black text-xl leading-6 text-[#1b1b1bcc]`}
+              >
+                Veja abaixo algumas
+                <br /> de nossas ações
+              </span>
+              <div
+                className="p-4 border-2 rounded-tr-[50%] 
+            rounded-br-[50%] rounded-bl-[50%] border-[#FF9F1C]"
+              >
+                <FaArrowTurnDown color="#FFBF69" size={"22px"} />
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+      {/* end to hero home */}
+
+      <section className="bg-[url('https://i.imgur.com/G8Q9i5g.png')] h-[609px] ">
+        <div className="flex flex-col w-[778px]  ml-[10%] pt-[64px]">
+        <section className="border-8 border-[#1B1B1B8c] w-[100%] p-8 flex flex-col gap-8 h-60 text-center items-center">
+          <h1 className="text-5xl font-[inter] ">
+            ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span>
+          </h1>
+          <h3 className="text-2xl">
+            Distribuição de cestas básicas e marmitas para pessoas vulneráveis
+            ou em situação de rua
+          </h3>
+        </section>
+
+        <div className="flex gap-8 text-xl font-semibold text-[1B1B1B]  justify-center mt-[48px]">
+          <li className="list-none">ações voluntárias</li> 
+          <li>kits de higiene feminina</li>
+          <li>brinquedos para as crianças</li>
+        </div>
+
+        <div className="font-bold text-xl flex gap-4 justify-center mt-[64px]">
+          <Link href={"/"}>
+            <div
+              className="bg-yellow-primary h-12 w-72 text-center grid place-content-center
+              hover:bg-yellow-primaty-hover
+             text-white rounded-lg cursor-pointer"
             >
               Ajude-nos
-            </a>
-            <a
-              href="#"
-              className={`${outfitFont.className} font-black
-              text-5 text-xl py-3 px-10 border-2 border-[#FF9F1C]  rounded-lg`}
+            </div>
+          </Link>
+          <Link href={"/"}>
+            <div
+              className="border-2 border-yellow-primary h-12 w-72 text-center grid place-content-center
+             text-primary-black-text rounded-lg cursor-pointer hover:border-yellow-primaty-hover "
             >
               Conheça o projeto
-            </a>
-          </div>
-
-
-
-          <div className="flex gap-5 w-[90%] items-center justify-center">
-            <span
-              className={`${ZillaFont.className} font-black text-xl leading-6 text-[#1b1b1bcc]`}
-            >
-              Veja abaixo algumas
-              <br /> de nossas ações
-            </span>
-            <div
-              className="p-4 border-2 rounded-tr-[50%] 
-            rounded-br-[50%] rounded-bl-[50%] border-[#FF9F1C]"
-            >
-              <FaArrowTurnDown color="#FFBF69" size={"22px"} />
             </div>
-          </div>
-        </article>
+          </Link>
+          {/* <div className="bg-red-400">Conheça o projeto</div> */}
+        </div>
+        </div>
       </section>
-</section>
-
-
-<section className="bg-[url('https://i.imgur.com/G8Q9i5g.png')] h-[609px]">
-      <section className="border-8 border-[#1B1B1B8c] w-1/2  p-8 flex flex-col gap-8 h-60 text-center items-center">
-        <h1 className="text-4xl font-[inter] ">ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span></h1>
-        <h3 className="text-2xl">Distribuição de cestas básicas e marmitas
-          para pessoas vulneráveis ou em situação de rua</h3>
-
-
-      </section>
-
-      <div className="flex gap-8  w-1/2  text-xl font-semibold text-[1B1B1B] mt-12">
-            <span>ações voluntárias</span>
-            <span>kits de higiene feminina</span>
-            <span>brinquedos para as crianças</span>
-          </div>
-</section>
-
-
-
 
       <section className="flex gap-8 py-12 px-5 flex-col w-full bg-[#FFBF69]">
         <article className="flex flex-col gap-6">
@@ -224,7 +244,8 @@ export const Home = () => {
         </article>
       </section>
 
-      <FooterMobile />
+      {/* <FooterMobile /> */}
+      {/* removed the footer componente to the Global Layout */}
     </>
   );
 };
