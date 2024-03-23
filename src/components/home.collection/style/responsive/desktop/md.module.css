@@ -1,0 +1,33 @@
+/* image importing */
+
+
+
+@layer reponsiveSizeDesktop {
+
+ .bannerHeroHome{
+  @apply
+  bg-[url('https://i.imgur.com/G8Q9i5g.png')] h-[609px]
+
+ }
+
+ .divHomeComponents{
+  @apply
+  flex flex-col w-[778px]  ml-[10%] pt-[64px]
+  
+ }
+
+ .headerTitles{
+  @apply
+ border-8 border-primary-black-text w-[100%] p-8 flex flex-col gap-8 h-60 text-center items-center
+ 
+ 
+ }
+
+ .actionList{
+  @apply
+  flex gap-8 text-xl font-semibold text-[1B1B1B]  justify-center mt-[48px]
+ }
+
+
+
+}

@@ -1,11 +1,8 @@
-import { Home } from "../components/home.collection/home";
+
 import "./globals.css";
 
 // components exports
-import { CallToActionButton } from "@/components/calltoaction.collection/button";
-
-
-
+import { Home } from "../components/home.collection/heroBanner";
 
 export default function Page() {
   return (
