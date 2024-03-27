@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .Images {
   display: flex;
   width: 100%;
@@ -25,8 +26,6 @@
 
     .Images div::after{
     display: none;
-
-
 }
 }
 
@@ -36,3 +35,4 @@
   margin: auto auto;
   border-radius: 8px;
 }
+

@@ -9,6 +9,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
+      colors: {
+
+        // creation of tailwind color variable
+        "navbar-Yellow": "#FFBF69",
+        "navbar-pinkBackground": "#FFDDE1",
+        "navbar-newblue": "#114B5F",
+        "yellow-primary": "#FF9F1C",
+        "yellow-primaty-hover" : "#f97c07",
+        "primary-black-text" : "#1B1B1B"
+      }
       
     },
     screens: {
