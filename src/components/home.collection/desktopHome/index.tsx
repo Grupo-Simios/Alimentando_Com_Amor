@@ -2,7 +2,7 @@ import reponsiveSizeDesktop from '@/components/home.collection/style/responsive/
 import Link from 'next/link'
 export const HomeDesktop = () =>{
   return(
-    <>
+    <section className='max-md:hidden'>
        <section className={reponsiveSizeDesktop.bannerHeroHome}>
         <div className={reponsiveSizeDesktop.divHomeComponents}>
         <header className="border-8 border-[#1B1B1B8c] w-[100%] p-8 flex flex-col gap-8 h-60 text-center items-center">
@@ -43,6 +43,6 @@ export const HomeDesktop = () =>{
         </div>
         </div>
       </section>
-    </>
+    </section>
   )
 }
