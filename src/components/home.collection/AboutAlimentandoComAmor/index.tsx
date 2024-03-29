@@ -27,8 +27,8 @@ export const AboutAlimentandoComAmor = () =>{
     
     <>
        
-       <section className="flex bg-[#F9F6EE] flex-col items-center gap-10 leading-7 py-16 px-5">
-        <h1 className={`${ZillaFont.className} font-black text-2xl `}>
+       <section className="sectionSwiper flex bg-[#F9F6EE] flex-col items-center gap-10 leading-7 py-16 px-5">
+        <h1 className={`${ZillaFont.className} font-black text-2xl max-[250px]: text-lg text-center`}>
           Alimentando com amor
         </h1>
 
