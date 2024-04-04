@@ -1,23 +1,27 @@
 
-@layer navigationBar {
+.navbartop{
+  @apply
+  hidden
+}
 
-  .navbartop {
+@screen md{
+  .navbartop{
     @apply h-14 w-[100%] 
-   justify-between items-center 
-    text-base font-semibold
-    px-[50px]
-    bg-navbar-Yellow
-    hidden
-    lg:flex
+    justify-end items-center 
+     text-base font-semibold
+     px-[50px]
+     bg-navbar-Yellow
+     md:flex
+    
+  
   }
-
-
+  
   .navBarUl{
     @apply 
     flex
-    border
     h-full
     gap-4
+    justify-end
   }
 
   .liNavBar{
@@ -37,4 +41,20 @@
    
   }
 
+  .spanname{
+    @apply
+    hidden
+  }
+}
+
+
+@screen xl{
+  .navbartop{
+    @apply
+    justify-between
+  }
+  .spanname{
+    @apply
+    flex
+  }
 }
