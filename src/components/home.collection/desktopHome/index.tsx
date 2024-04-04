@@ -5,7 +5,7 @@ export const HomeDesktop = () =>{
     <section className='max-md:hidden'>
        <section className={reponsiveSizeDesktop.bannerHeroHome}>
         <div className={reponsiveSizeDesktop.divHomeComponents}>
-        <header className="border-8 border-[#1B1B1B8c] w-[100%] p-8 flex flex-col gap-8 h-60 text-center items-center">
+        <header className={reponsiveSizeDesktop.headerHomecomponents}>
           <h1 className="text-5xl font-[inter] ">
             ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span>
           </h1>
