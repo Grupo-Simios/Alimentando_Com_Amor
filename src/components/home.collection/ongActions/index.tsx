@@ -1,23 +1,23 @@
 import { ZillaFont, outfitFont } from "@/assets/fonts"
+import styleActions from '@/components/home.collection/ongActions/style/ongactions.module.css'
 
 export const OngActions = () =>{
   return(
     <>
     
   <section>
-    <header className="hidden md:block md:text-center  md:bg-white md:py-8">
+
+    <header className={`hidden ${styleActions.headerActions}`}>
       <h1 className="text-2xl font-bold">Veja algumas de nossas ações</h1>
     </header>
   <section className="flex gap-8 py-12 px-5 flex-col w-full bg-[#FFBF69] md:bg-white
-     md:flex md:flex-row md:justify-center
+     md:flex md:flex-row md:justify-center md:flex-wrap
      ">
     
   
-        <article className="flex flex-col gap-6 
-         md:w-72 md:h-60 md:shadow-lg md:p-6 md:rounded-2xl md:border
-        ">
+        <article className={`flex flex-col gap-6 ${styleActions.firsArticle}`}>
           <span
-            className={`${ZillaFont.className} font-semibold text-2xl leading-7 
+            className={`${ZillaFont.className} font-semibold text-2xl  leading-7 
             md:hidden
             `}
           >
@@ -25,7 +25,7 @@ export const OngActions = () =>{
           </span>
           <p
             className={`${outfitFont.className} text-lg leading-5 text-[##1B1B1BCC] text-justify max-[250px]:text-base
-            md:leading-2 md:text-left
+            md:leading-2 md:text-left 
             `}
           >
             No dia 11/03 de 2023 realizamos o dia da mulher distribuindo mais de

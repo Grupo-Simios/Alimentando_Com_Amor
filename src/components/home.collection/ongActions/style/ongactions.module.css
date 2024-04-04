@@ -1,0 +1,19 @@
+
+
+@screen md{
+  .headerActions{
+    @apply
+    
+    
+     md:block md:text-center md:bg-white md:py-8
+    
+  }
+
+  .firsArticle{
+    @apply
+    
+    md:w-72 md:h-60 md:shadow-lg md:p-6 md:rounded-2xl md:border
+  
+    text-[200px]
+  }
+}
