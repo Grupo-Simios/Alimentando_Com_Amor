@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+const allfonts = `@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap')`
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,6 +10,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily : {
+        'outfit': ['Outfit', 'sans-serif'],
+        'zilla-slab': ['Zilla Slab', 'serif']
+      },
+      fontSize : {
+        "md-title" : "4rem"
+      },
 
       colors: {
 

@@ -1,6 +1,7 @@
 import { Menu } from "@/components/calltoaction.collection/Menu";
 
 import { FooterMobile } from "@/components/footer.collection/footer/mobile";
+import OurHistoryStyle from '@/style/OurHistory.collection/ourhistory.module.css'
 
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 
@@ -13,10 +14,8 @@ export default function OurHistory() {
   "
     >
       <header
-        className="flex   w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
-    md:hidden
-    max-[200px]:h-10
-    "
+        className={`flex   w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
+        max-[200px]:h-10`}
       >
         <h1
           className={`${ZillaFont.className} uppercase absolute flex  gap-3 items-center z-[-1] justify-center inset-0 text-xl 
@@ -130,7 +129,7 @@ export default function OurHistory() {
           </span>
 
           <p
-            className={`${outfitFont.className}  w-52 font-bold text-lg leading-6 text-[#1B1B1BCC] max-[250px]:text-xs w-[80%] `}
+            className={`${outfitFont.className}  font-bold text-lg leading-6 text-[#1B1B1BCC] max-[250px]:text-xs w-[80%] `}
           >
             O dinheiro arrecadado é utilizado diretamente no preparo das
             marmitas e no pagamento de contas da instituição

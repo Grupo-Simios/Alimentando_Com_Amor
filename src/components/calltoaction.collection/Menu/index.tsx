@@ -10,7 +10,7 @@ export const Menu = () => {
   const [openMenu, setopenMenu] = useState(false);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:hidden">
       <IoIosMenu
         cursor={"pointer"}
         className={
