@@ -1,0 +1,56 @@
+@screen md {
+
+  .OurHistoryContainer {
+    @apply 
+    gap-6
+   
+    
+  }
+
+  .Title{
+    @apply
+    bg-blue-600
+    mt-20
+  }
+
+  .sectionTitle {
+    @apply relative
+  }
+
+  .textBlock {
+    @apply 
+    w-3/4
+    ml-auto mr-auto
+   
+   
+  }
+  .textBlock h2{
+    @apply 
+    text-center
+   
+  }
+
+  .donateSection{
+    @apply border
+  }
+
+  .donateSection figure{
+    @apply
+    border-red-700
+    
+  }
+}
+
+@layer DonateSection{
+  @screen md{
+    .donateDiv{
+      @apply
+       md:flex md:flex-col-reverse items-center justify-center
+       pt-16
+    }
+  }
+
+  .donateSection figure {
+    @apply
+hidden  }
+}
