@@ -1,24 +1,23 @@
 import { Menu } from "@/components/calltoaction.collection/Menu";
 
 import { FooterMobile } from "@/components/footer.collection/footer/mobile";
-import OurHistoryStyle from '@/style/OurHistory.collection/ourhistory.module.css'
+import Style from '@/style/OurHistory.collection/desktop.module.css'
 
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 
 export default function OurHistory() {
   return (
-    <div
-      className="flex items-center flex-col gap-10 
+    <section
+      className={`${Style.OurHistoryContainer}flex items-center flex-col gap-10 
   
-  max-[150px]:overflow-x-hidden
-  "
+      max-[150px]:overflow-x-hidden`}
     >
       <header
-        className={`flex   w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
-        max-[200px]:h-10`}
+        className={`${Style.sectionTitle} flex  w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
+        max-[200px]:h-10 `}
       >
         <h1
-          className={`${ZillaFont.className} uppercase absolute flex  gap-3 items-center z-[-1] justify-center inset-0 text-xl 
+          className={`${ZillaFont.className} ${Style.Title} uppercase absolute flex gap-3 items-center z-[-1] justify-center inset-0 text-xl 
         
         max-[200px]:text-[10px]
         max-[210px]:px-0
@@ -32,7 +31,7 @@ export default function OurHistory() {
         <Menu />
       </header>
 
-      <section className="flex flex-col gap-6 mt-24 px-5">
+      <section className={`${Style.textBlock} flex flex-col gap-6 mt-24 px-5`}>
         <h2
           className={`${ZillaFont.className} text-2xl pb-2 border-b-[2px] leading-7 border-[#FF9F1C] font-normal 
         
@@ -108,14 +107,12 @@ export default function OurHistory() {
         </p>
       </section>
 
-      <section
-        className="flex pb-4 gap-10 flex-col mt-10 mx-4 w-fit border-[6px] border-[#FF9F1C] 
+     <div className={`${Style.donateDiv}`}>
+     <section
+        className={`${Style.donateSection} flex pb-4 gap-10 flex-col mt-10 mx-4 w-fit border-[6px] border-[#FF9F1C] 
     
-    max-[250px]:w-[100%]
-    max-[250px]:mx-0
-    
-    
-    "
+        max-[250px]:w-[100%]
+        max-[250px]:mx-0 `}
       >
         <figure className="flex w-fit">
           <img src={"https://github.com/DaviSC17.png"} alt="Imagem de doação" />
@@ -169,6 +166,7 @@ export default function OurHistory() {
           SEXUAL
         </p>
       </section>
+     </div>
 
       <section
         className="flex flex-col gap-8 p-4
@@ -407,6 +405,6 @@ export default function OurHistory() {
           </ul>
         </article>
       </section>
-    </div>
+    </section>
   );
 };
