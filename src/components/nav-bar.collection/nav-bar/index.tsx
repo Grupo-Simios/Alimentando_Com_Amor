@@ -1,27 +1,55 @@
 import Link from "next/link"
-import navbarStyle from "@/components/nav-bar.collection/style/navbar.module.css"
+import clsx from "clsx"
+import { ZillaFont } from "@/assets/fonts"
+
+export default function NavBarTop(){
 
 
-export const NavBarTop = () =>{
+
+  const navBar = clsx(
+    'hidden bg-navbar-Yellow flex justify-around',
+    'md:flex  md:justify-end',
+    'xl:justify-around',
+    '1xl:justify-between'
+  )
+  const OngName = clsx(
+    'flex items-center justify-center font-semibold hidden',
+    'hidden xl:flex px-8 w-[40%]',
+    'xl:w-auto'
+  )
+
+  const ulnavBar = clsx(
+    'flex',
+    'md:w-[90%]',
+    'xl:w-[60%]'
+  )
+  const navItems = clsx(
+    "w-[20%] text-center h-14 grid place-content-center hover:bg-yellow-primaty-hover text-primary-black-text text-base font-semibold hover:text-white rounded-b-[8px]",
+    "last:bg-navbar-newblue last:text-white last:hover:bg-[#092934] last:rounded-b-[8px] ",
+    " md:px-4",
+    'xl:px-2 xl:w-[18%]'
+  );
+
+
   return(
-    <nav className={navbarStyle.navbartop}>
-    <span className={navbarStyle.spanname}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</span>
 
-    <ul className={navbarStyle.navBarUl}>
-      <Link className="h-full flex" href={"/"}>
-        <li className={navbarStyle.liNavBar}  >Página inicial</li>
+    <nav className={`${ZillaFont.className} ${navBar} `}>
+      <span className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</span>
+    <ul className={ulnavBar}>
+      <Link  href={"/"} className={navItems}>
+        <li>Página inicial</li>
       </Link>
-      <Link className="h-full flex" href={"/nossa-historia"}>
-        <li className={navbarStyle.liNavBar}  >Nossa história</li>
+      <Link className={navItems} href={"/nossa-historia"}>
+        <li>Nossa história</li>
       </Link>
-      <Link className="h-full flex" href={"/ajude-nos"}>
-        <li className={navbarStyle.liNavBar}  >Ajude-nos</li>
+      <Link className={navItems} href={"/ajude-nos"}>
+        <li>Ajude-nos</li>
       </Link>
-      <Link className="h-full flex" href={"/contato"}>
-        <li className={navbarStyle.liNavBar}  >Contato</li>
+      <Link className={navItems} href={"/contato"}>
+        <li>Contato</li>
       </Link>
-      <Link className="h-full flex" href={"/grupo-simios"}>
-        <li className={`${navbarStyle.liNavBar} ${navbarStyle.selectNavItems}`}>Grupo Símios</li>
+      <Link className={navItems} href={"/grupo-simios"}>
+        <li>Grupo Símios</li>
       </Link>
     </ul>
   </nav>
