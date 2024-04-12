@@ -1,18 +1,54 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { ZillaFont, outfitFont } from "@/assets/fonts/index";
+import Link from "next/link";
+import clsx from "clsx";
 
 export const FooterMobile = () => {
+
+  const footerTitle = clsx(
+    'font-normal  text-center text-[#f5f5f5] uppercase text-xl leading-6', 
+    'max-[195px]:w-[100px] max-[195px]:text-[10px] max-[285px]:text-base  max-[285px]:w-40  min-[286px]:w-60',
+    'lg:text-[#444444]', 'lg:text-nav-newblue',
+)
+
+const footerMain = clsx(
+  'flex bg-[#1b1b1bCC] gap-6 w-full flex-col',
+  'lg:flex-row-reverse lg:py-10 lg:bg-navbar-Yellow'
+  
+  
+)
+
+const footerDivSocial = clsx(
+  "flex items-center justify-center flex-col border-b border-[#000000] lg:border-none py-12 w-full mx-auto gap-8",
+  'lg:text-red'
+  
+)
+const footerDivContact = clsx(
+  "flex flex-col w-full  items-center gap-8 mx-auto",
+  'lg:flex-1'
+  
+)
+
+const footerDivSiteMap = clsx(
+  "flex w-[95%] border-t border-[#000000] lg:border-none  pt-2 mx-auto items-center justify-center flex-col gap-3",
+  ''
+)
+
+const footerNavItems = clsx(
+  'no-underline text-sm leading-4 text-[#f5f5f5]',
+  'lg:text-primary-black-text'
+)
+
+const footerText = clsx(
+  'lg:text-primary-black-text'
+)
+
   return (
-    <footer className="flex bg-[#1b1b1bCC]  gap-6 w-full flex-col">
-      <div className="flex items-center justify-center flex-col border-b border-[#000000] py-12 w-full mx-auto gap-8">
+    <footer className={footerMain}>
+      <div className={footerDivSocial}>
         <h1
-          className={`${ZillaFont.className} font-normal  text-center text-[#f5f5f5] uppercase text-xl leading-6  
-            max-[195px]:w-[100px]
-            max-[195px]:text-[10px] 
-            max-[285px]:text-base
-            max-[285px]:w-40   
-            min-[286px]:w-60`}
+          className={`${ZillaFont.className} ${footerTitle}`}
         >
           siga-nos nas redes
         </h1>
@@ -32,9 +68,9 @@ export const FooterMobile = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col w-full  items-center gap-8 mx-auto">
+      <div className={footerDivContact}>
         <h1
-          className={`${ZillaFont.className}  font-normal uppercase text-[#f5f5f5] leading-7 text-2xl flex justify-center
+          className={`${ZillaFont.className} ${footerTitle} font-normal uppercase text-[#f5f5f5] leading-7 text-2xl flex justify-center
             max-[195px]:w-[100px]
             max-[195px]:text-[10px] 
             max-[285px]:text-base
@@ -47,7 +83,7 @@ export const FooterMobile = () => {
 
         <div className="flex flex-col gap-6">
           <p
-            className={`${outfitFont.className}   font-normal leading-4 text-xs  text-[#f5f5f5] 
+            className={`${outfitFont.className} ${footerText} font-normal leading-4 text-xs  text-[#f5f5f5] 
 
             max-[215px]:text-[6px]
             max-[215px]:font-bold
@@ -57,7 +93,7 @@ export const FooterMobile = () => {
             Rua Professor Zuza, 731 Cidade Alta RN
           </p>
           <p
-            className={`${outfitFont.className} text-xs font-normal leading-4  text-[#f5f5f5] flex gap-3 items-center 
+            className={`${outfitFont.className} ${footerText} text-xs font-normal leading-4  text-[#f5f5f5] flex gap-3 items-center 
             max-[215px]:text-[6px]
             max-[215px]:font-bold
             sm:text-base  
@@ -72,7 +108,7 @@ export const FooterMobile = () => {
           </p>
 
           <p
-            className={`${outfitFont.className}font-normal  leading-4  text-[#f5f5f5] text-xs rounded-lg flex gap-3 items-center   
+            className={`${outfitFont.className} ${footerText} font-normal  leading-4  text-[#f5f5f5] text-xs rounded-lg flex gap-3 items-center   
 
 
             max-[215px]:text-[6.5px]
@@ -81,65 +117,50 @@ export const FooterMobile = () => {
             
             max-[320px]:text-[10px]`}
           >
-            <MdOutlineEmail
+        
+
+    
+    <MdOutlineEmail 
               size={"20px"}
               color="#f5f5f5"
-              className="max-[320px]:hidden"
+              className={`max-[320px]:hidden ${footerText}`}
             />
+ 
+
+
             E-mail:
             <br />
             voluntário@alimentandocomamornatal.org
           </p>
         </div>
       </div>
-      <div className="flex w-[95%] border-t border-[#000000] pt-2 mx-auto items-center justify-center flex-col gap-3">
+      <div className={footerDivSiteMap}>
         <h1
-          className={`${ZillaFont.className} font-normal text-[#f5f5f5] uppercase text-xl leading-6 `}
+          className={`${ZillaFont.className} ${footerTitle} font-normal text-[#f5f5f5] uppercase text-xl leading-6 `}
         >
           sitemap
         </h1>
         <nav>
           <ul className="flex flex-col items-center gap-2">
             <li>
-              <a
-                className={`${outfitFont.className} no-underline text-sm leading-4 text-[#f5f5f5]`}
-                href="#"
-              >
-                Página Inicial
-              </a>
-            </li>
-            <li>
-              <a
-                className={`${outfitFont.className} no-underline text-sm leading-4 text-[#f5f5f5]`}
-                href="#"
-              >
-                Nossa História
-              </a>
-            </li>
-            <li>
-              <a
-                className={`${outfitFont.className} no-underline text-sm leading-4 text-[#f5f5f5]`}
-                href="#"
-              >
-                Ajude-nos
-              </a>
-            </li>
-            <li>
-              <a
-                className={`${outfitFont.className} no-underline text-sm leading-4 text-[#f5f5f5]`}
-                href="#"
-              >
-                Contato
-              </a>
-            </li>
-            <li>
-              <a
-                className={`${outfitFont.className} no-underline text-sm leading-4 text-[#f5f5f5]`}
-                href="#"
-              >
-                Grupo Simios
-              </a>
-            </li>
+              <Link className={`${outfitFont.className} ${footerNavItems}`} href="/">
+                Página Inicial </Link> </li>
+
+                <li>
+              <Link className={`${outfitFont.className} ${footerNavItems}`} href="/nossa-história">
+              Nossa história </Link> </li>
+
+                <li>
+              <Link className={`${outfitFont.className} ${footerNavItems}`} href="/ajude-nos">
+              Ajude-nos </Link> </li>
+
+                <li>
+              <Link className={`${outfitFont.className} ${footerNavItems}`} href="/contato">
+                Contato</Link> </li>
+
+                <li>
+              <Link className={`${outfitFont.className} ${footerNavItems}`} href="/grupo-simios">
+                Grupo Simios </Link> </li>
           </ul>
         </nav>
       </div>
