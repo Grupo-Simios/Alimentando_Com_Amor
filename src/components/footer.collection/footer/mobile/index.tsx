@@ -47,11 +47,11 @@ const footerText = clsx(
   return (
     <footer className={footerMain}>
       <div className={footerDivSocial}>
-        <h1
+        <h2
           className={`${ZillaFont.className} ${footerTitle}`}
         >
           siga-nos nas redes
-        </h1>
+        </h2>
         <div className="flex h-fit gap-6 items-center justify-center">
           <a href="#">
             <FaFacebook

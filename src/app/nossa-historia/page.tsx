@@ -68,7 +68,6 @@ const whoActionsText = clsx(
 'max-[165px]:text-xs max-[190px]:text-sm max-[230px]:text-base text-outfit text-[#1B1B1BCC] font-bold text-xl',
 "leading-7 w-full",
 'md:mt-[-100px]'
-
   
 );
 
@@ -148,15 +147,8 @@ const whoActionsText = clsx(
 );
 
  const objectivetitles = clsx(
-  "border-l-[6px]",
-  "border-[#FF9F1C]",
-  "p-2",
-  "font-bold",
-  "text-xl",
-  "max-[200px]:text-base",
-  "max-[200px]:px-0",
-  "max-[200px]:w-32",
-  "max-[200px]:text-center"
+"border-l-[6px] border-[#FF9F1C] p-2 text-xl",
+'max-[200px]:text-base max-[200px]:px-0 max-[200px]:w-32 max-[200px]:text-center'
 );
 
  const listContainer = clsx(
@@ -193,6 +185,7 @@ const whoActionsText = clsx(
 
       <section className={whoUsTextContainer}>
         <h2 className={sectiontitles}>Quem somos</h2>
+        
         <p className={paragraph}>
           Alimentando com amor é uma associação sem fins lucrativos com mais de
           5 anos de funcionamento. No começo, usávamos um carrinho de mão para

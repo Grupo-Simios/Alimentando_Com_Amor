@@ -20,7 +20,7 @@ export default function Contact() {
   )
 
   const contactHeader = clsx(
-    "flex w-full h-16 justify-end items-center backdrop-blur fixed  px-1 md:hidden max-[200px]:h-10"
+    "flex w-full h-16 justify-end items-center backdrop-blur fixed px-1 md:hidden max-[200px]:h-10 z-10"
   )
 
   const containerItems = clsx(
@@ -43,7 +43,7 @@ export default function Contact() {
     >
       <header className={contactHeader}>
       <h1
-          className={`${ZillaFont.className} uppercase absolute flex  gap-3 items-center z-[-1] justify-center inset-0 text-xl 
+          className={`${ZillaFont.className} uppercase absolute flex  gap-3 items-center justify-center inset-0 text-xl 
         
         max-[200px]:text-[13px]
         max-[210px]:px-0
@@ -60,10 +60,10 @@ export default function Contact() {
  <section
         className={`${outfitFont.className} ${containerItems}`}
       >
-        <span
+        <h2
           className={contactTitle}>
           TELEFONES
-        </span>
+        </h2>
 
         <ul
           className={`${outfitFont.className} text-lg flex flex-col gap-5
@@ -76,9 +76,9 @@ export default function Contact() {
         max-[200px]:font-semibold 
         `}
         >
-          <li>Administração: (84) 2131-8789</li>
-          <li>Maria Aparecida Cida: (84) 98713-6833</li>
-          <li>Ysla Mônica: (84) 98713-6833</li>
+          <a title="Contato Administração">Administração: (84) 2131-8789</a>
+          <a target="_blank" href="https://wa.me/5584987136833" title="chamar no WhatsApp">Maria Aparecida Cida: (84) 98713-6833</a>
+          <a target="_blank" href="https://wa.me/987136833" title="chamar no WhatsApp">Ysla Mônica: (84) 98713-6833</a>
         </ul>
       </section>
 
@@ -98,18 +98,16 @@ export default function Contact() {
         >
           Copiar email
         </button>
-        <span
+        <h2
           className="font-normal text-xl leading-7 text-[#1B1B1BCC]] border-b-[2px] border-[#FF9F1C]
         max-[350px]:text-lg
         max-[280px]:text-base
         max-[200px]:text-sm
         max-[200px]:font-bold
-        max-[160px]:text-[10px]
-        
-        "
+        max-[160px]:text-[10px]"
         >
           EMAIL
-        </span>
+        </h2>
         <ul
           className={`${outfitFont.className} text-lg flex flex-col gap-5
         
@@ -123,18 +121,18 @@ export default function Contact() {
         max-[200px]:text-[6px]
         `}
         >
-          <li ref={Email}>voluntario@alimentandocom{}amornatal.org</li>
+          <a ref={Email}>voluntario@alimentandocom{}amornatal.org</a>
         </ul>
       </section>
 
-      <section
+      <address
         className={`${outfitFont.className} w-full px-4 flex flex-col  gap-5`}
       >
-        <span
+        <h2
           className={contactTitle}
         >
           ENDEREÇO
-        </span>
+        </h2>
 
         <ul
           className={`${outfitFont.className} text-lg flex flex-col gap-5
@@ -151,14 +149,14 @@ export default function Contact() {
             Rua Santo Antônio 731 <br /> Cidade Alta, Natal RN
           </li>
         </ul>
-      </section>
+      </address>
  </div>
 
       <section className={contactLocalization}>
-        <span
+        <h2
           className={`${contactTitle}  md:border-none md:text-center md:text-base`}>
           LOCALIZAÇÃO
-        </span>
+        </h2>
 
         <figure className="flex w-full max-w-[300px] self-center">
           <img
