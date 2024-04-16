@@ -1,11 +1,32 @@
 import reponsiveSizeDesktop from '@/components/home.collection/style/responsive/desktop/md.module.css'
 import Link from 'next/link'
+import clsx from 'clsx'
 export const HomeDesktop = () =>{
+
+  const heroContainer = clsx(
+    'max-md:hidden'
+  )
+  const bannerHeroHome = clsx(
+    'md:h-[609px]',
+    'lg:bg-[url(https://i.imgur.com/G8Q9i5g.png)] lg:h-[609px]'
+  )
+  
+
+  const divHomeComponents = clsx(
+    'md:flex md:flex-col md:w-[778px] md:pt-[64px]',
+    'lg:flex lg:flex-col lg:w-[778px] lg:ml-[10%] lg:pt-[64px]'
+    
+  )
+
+  const headerHomecomponents = clsx(
+  'md:border-8 md:border-[#1B1B1B8c] md:-[90%] md:p-8 md:flex md:flex-col md:gap-8 md:h-60 md:text-center md:items-center',
+    'md:ml-auto md:mr-auto'
+  )
   return(
-    <section className='max-md:hidden'>
-       <section className={reponsiveSizeDesktop.bannerHeroHome}>
-        <div className={reponsiveSizeDesktop.divHomeComponents}>
-        <header className={reponsiveSizeDesktop.headerHomecomponents}>
+    <section className={heroContainer}>
+       <section className={bannerHeroHome}>
+        <div className={divHomeComponents}>
+        <header className={headerHomecomponents}>
           <h1 className="text-5xl font-[inter] ">
             ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span>
           </h1>
