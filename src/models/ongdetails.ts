@@ -26,7 +26,7 @@ interface OngDetails {
 export const ongDetails: OngDetails[] = [
   {
     bankDetails: {
-      CNPJ: "51.753.476/0001-34",
+      CNPJ: "00020126360014br.gov.bcb.pix011451753476000134 5204000053039865802BR5910----------6005 NATAL 62070503***630476E4",
       qrCode: '',
       agency: "0035",
       operator: "003",
