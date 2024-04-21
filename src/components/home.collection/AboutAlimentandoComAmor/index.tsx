@@ -26,26 +26,6 @@ export const AboutAlimentandoComAmor = () =>{
   ];
   
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch('https://alimentando-com-amor-api-production.up.railway.app/text/home/first-square');
-        if (!response.ok) {
-          throw new Error('Não foi possível obter os dados');
-        }
-        const responseData = await response.json();
-        const { data, status, message } = responseData;
-      
-      } catch (error) {
-        console.error('Erro ao buscar dados:', error);
-      }
-    };
-  
-    getData();
-  }, []);
-  
-  
-
   return(
     
     <>
