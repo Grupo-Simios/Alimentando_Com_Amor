@@ -12,6 +12,7 @@ export const Menu = () => {
   return (
     <div className="flex flex-col md:hidden z-[20]">
       <IoIosMenu
+        title="Abrir menu"
         cursor={"pointer"}
         className={
           openMenu
@@ -31,11 +32,12 @@ export const Menu = () => {
       {openMenu ? (
         <div className="flex flex-col items-end">
           <IoClose
+          title="Fechar menu"
             className={`
             block 
             text-[30px]
-          max-[170px]:text-[16px]
-          max-[240px]:text-[20px]
+            max-[170px]:text-[16px]
+            max-[240px]:text-[20px]
             `}
             onClick={() => setopenMenu(!openMenu)}
             cursor={"pointer"}
@@ -67,7 +69,7 @@ export const Menu = () => {
               <li>
                 <Link
                   className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#DEB841] items-center justify-center`}
-                  href={'/ajude-nos'}
+                  href={"/ajude-nos"}
                 >
                   Ajude-nos
                 </Link>
@@ -75,7 +77,7 @@ export const Menu = () => {
               <li>
                 <Link
                   className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#DEB841] items-center justify-center`}
-                  href={'contato'}
+                  href={"contato"}
                 >
                   Contato
                 </Link>
@@ -83,7 +85,7 @@ export const Menu = () => {
               <li>
                 <Link
                   className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#2C70A6] items-center justify-center rounded-b-lg`}
-                  href={'/simios'}
+                  href={"/simios"}
                 >
                   Grupo Simios
                 </Link>
