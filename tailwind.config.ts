@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const zila = `@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap')`;
+const out = `@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap')`;
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,6 +11,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'zilla-slab': ['Zilla Slab', 'sans-serif'],
+      },
+      fontSize : {
+        "md-title" : "4rem"
+      },
 
       colors: {
 
@@ -36,6 +44,7 @@ const config: Config = {
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
+      '1xl' : '1366px',
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }

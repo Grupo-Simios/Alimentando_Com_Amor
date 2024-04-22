@@ -10,7 +10,7 @@ export const Menu = () => {
   const [openMenu, setopenMenu] = useState(false);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:hidden z-[20]">
       <IoIosMenu
         title="Abrir menu"
         cursor={"pointer"}
@@ -22,6 +22,7 @@ export const Menu = () => {
 
           max-[170px]:text-[16px]
           max-[240px]:text-[20px]
+          
         
         `
         }

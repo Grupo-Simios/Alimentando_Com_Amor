@@ -1,3 +1,4 @@
+
 import { AboutUsOurHistory } from "@/components/ourHistory.collection/aboutUs";
 import { OurGoals } from "@/components/ourHistory.collection/ourGoals/";
 import { SendDonation } from "@/components/ourHistory.collection/sendDonation";
@@ -28,5 +29,6 @@ export default function OurHistory() {
 
       <OurGoals />
     </div>
+
   );
 }

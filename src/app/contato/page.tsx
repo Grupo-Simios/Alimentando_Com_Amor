@@ -3,6 +3,7 @@
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import { Menu } from "@/components/calltoaction.collection/Menu";
 import { useRef } from "react";
+import clsx from "clsx";
 
 export default function Contact() {
   const Email = useRef<any>();
@@ -13,21 +14,36 @@ export default function Contact() {
       .then(() => alert("Copiado com sucesso"));
   };
 
+  const contactContainer = clsx(
+    "flex items-center flex-col gap-20 max-[150px]:overflow-x-hidden",
+    'md:flex-row md:gap-10 md:mb-20'
+  )
+
+  const contactHeader = clsx(
+    "flex w-full h-16 justify-end items-center backdrop-blur fixed px-1 md:hidden max-[200px]:h-10 z-10"
+  )
+
+  const containerItems = clsx(
+    'w-full px-4 flex flex-col mt-28  gap-5 md:mb-10'
+  )
+
+  const contactTitle = clsx(
+    "text-xl leading-7 text-[#1B1B1BCC] border-b-[2px] border-[#FF9F1C] max-[350px]:text-lg max-[280px]:text-base max-[200px]:text-sm max-[200px]:font-bold max-[160px]:text-[10px]"
+    ,'md:mt-10'
+  )
+
+  const contactLocalization = clsx(
+    'w-full px-4 flex flex-col  gap-10 mb-20',
+    'md:w-1/2 md:px-0 md:justify-center'
+  )
+
   return (
     <div
-      className="flex items-center flex-col gap-20
-      bg-[#F9F6EE]
-  
-    max-[150px]:overflow-x-hidden"
+      className={contactContainer}
     >
-      <header
-        className="flex   w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
-    md:hidden
-    max-[200px]:h-10
-    "
-      >
-        <h1
-          className={`${ZillaFont.className} uppercase absolute flex  gap-3 items-center z-[-1] justify-center inset-0 text-xl 
+      <header className={contactHeader}>
+      <h1
+          className={`${ZillaFont.className} uppercase absolute flex  gap-3 items-center justify-center inset-0 text-xl 
         
         max-[200px]:text-[13px]
         max-[210px]:px-0
@@ -40,22 +56,14 @@ export default function Contact() {
         <Menu />
       </header>
 
-      <section
-        className={`${outfitFont.className} w-full px-4 flex flex-col mt-28  gap-5`}
+ <div className=" md:w-1/2 md:pl-6 lg:ml-28">
+ <section
+        className={`${outfitFont.className} ${containerItems}`}
       >
-        <span
-          className=" text-xl leading-7 text-[#1B1B1BCC]] border-b-[2px] border-[#FF9F1C]
-        
-        max-[350px]:text-lg
-        max-[280px]:text-base
-        max-[200px]:text-sm
-        max-[200px]:font-bold
-        max-[160px]:text-[10px]
-      
-        "
-        >
+        <h2
+          className={contactTitle}>
           TELEFONES
-        </span>
+        </h2>
 
         <ul
           className={`${outfitFont.className} text-lg flex flex-col gap-5
@@ -65,12 +73,12 @@ export default function Contact() {
         max-[310px]:text-xs
         max-[260px]:text-[10px]
         max-[200px]:text-[8px]
-        max-[200px]:font-semibold
+        max-[200px]:font-semibold 
         `}
         >
-          <li>Administração: (84) 2131-8789</li>
-          <li>Maria Aparecida Cida: (84) 98713-6833</li>
-          <li>Ysla Mônica: (84) 98713-6833</li>
+          <a title="Contato Administração">Administração: (84) 2131-8789</a>
+          <a target="_blank" href="https://wa.me/5584987136833" title="chamar no WhatsApp">Maria Aparecida Cida: (84) 98713-6833</a>
+          <a target="_blank" href="https://wa.me/987136833" title="chamar no WhatsApp">Ysla Mônica: (84) 98713-6833</a>
         </ul>
       </section>
 
@@ -90,18 +98,16 @@ export default function Contact() {
         >
           Copiar email
         </button>
-        <span
+        <h2
           className="font-normal text-xl leading-7 text-[#1B1B1BCC]] border-b-[2px] border-[#FF9F1C]
         max-[350px]:text-lg
         max-[280px]:text-base
         max-[200px]:text-sm
         max-[200px]:font-bold
-        max-[160px]:text-[10px]
-        
-        "
+        max-[160px]:text-[10px]"
         >
           EMAIL
-        </span>
+        </h2>
         <ul
           className={`${outfitFont.className} text-lg flex flex-col gap-5
         
@@ -115,24 +121,18 @@ export default function Contact() {
         max-[200px]:text-[6px]
         `}
         >
-          <li ref={Email}>voluntario@alimentandocom{}amornatal.org</li>
+          <a ref={Email}>voluntario@alimentandocom{}amornatal.org</a>
         </ul>
       </section>
 
-      <section
+      <address
         className={`${outfitFont.className} w-full px-4 flex flex-col  gap-5`}
       >
-        <span
-          className="font-normal text-xl leading-7 text-[#1B1B1BCC]] border-b-[2px] border-[#FF9F1C]
-         max-[350px]:text-lg
-         max-[280px]:text-base
-         max-[200px]:text-sm
-         max-[160px]:text-[10px]
-         max-[160px]:font-bold
-        "
+        <h2
+          className={contactTitle}
         >
           ENDEREÇO
-        </span>
+        </h2>
 
         <ul
           className={`${outfitFont.className} text-lg flex flex-col gap-5
@@ -149,22 +149,14 @@ export default function Contact() {
             Rua Santo Antônio 731 <br /> Cidade Alta, Natal RN
           </li>
         </ul>
-      </section>
+      </address>
+ </div>
 
-      <section className="w-full px-4 flex flex-col  gap-10 mb-20">
-        <span
-          className="font-normal text-xl leading-7 text-[#1B1B1BCC]] border-b-[2px] border-[#FF9F1C]
-        
-        max-[350px]:text-lg
-        max-[280px]:text-base
-        max-[200px]:text-sm
-        max-[160px]:text-xs
-        max-[200px]:font-bold
-        max-[160px]:text-[10px]
-        "
-        >
+      <section className={contactLocalization}>
+        <h2
+          className={`${contactTitle}  md:border-none md:text-center md:text-base`}>
           LOCALIZAÇÃO
-        </span>
+        </h2>
 
         <figure className="flex w-full max-w-[300px] self-center">
           <img

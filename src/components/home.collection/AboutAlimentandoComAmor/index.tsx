@@ -1,4 +1,7 @@
+
+"use client"
 import { ZillaFont, outfitFont } from "@/assets/fonts/index";
+import { useEffect } from "react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,12 +26,32 @@ export const AboutAlimentandoComAmor = () =>{
   ];
   
 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await fetch('https://alimentando-com-amor-api-production.up.railway.app/text/home/first-square');
+        if (!response.ok) {
+          throw new Error('Não foi possível obter os dados');
+        }
+        const responseData = await response.json();
+        const { data, status, message } = responseData;
+      
+      } catch (error) {
+        console.error('Erro ao buscar dados:', error);
+      }
+    };
+  
+    getData();
+  }, []);
+  
+  
+
   return(
     
     <>
        
        <section className="sectionSwiper flex bg-[#F9F6EE] flex-col items-center gap-10 leading-7 py-16 px-5">
-        <h1 className={`${ZillaFont.className} font-black text-2xl max-[250px]: text-lg text-center`}>
+        <h1 className={`${ZillaFont.className} font-black max-[250px]: text-lg text-center`}>
           Alimentando com amor
         </h1>
 
