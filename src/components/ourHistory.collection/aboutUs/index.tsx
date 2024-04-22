@@ -7,12 +7,13 @@ export const AboutUsOurHistory = () => {
     `flex flex-col gap-6 mt-24 px-5`,
 
     /* Width change styles */
-    `max-[200px]:mt-14`
+    `max-[200px]:mt-14 md:w-1/2`
   );
 
   const SubTitleWhoWeAre = clsx(
     /* Base styles */
     `${ZillaFont.className} text-2xl pb-2 border-b-[2px] leading-7 border-[#FF9F1C] font-normal `,
+    'md:text-center',
 
     /* Width change styles */
     `max-[200px]:text-base max-[210px]:text-lg`
