@@ -1,5 +1,4 @@
 
-"use client"
 import { ZillaFont, outfitFont } from "@/assets/fonts/index";
 
 // Import Swiper styles

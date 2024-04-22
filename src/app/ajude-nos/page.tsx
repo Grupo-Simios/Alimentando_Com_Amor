@@ -4,10 +4,13 @@ import { ZillaFont, outfitFont } from "@/assets/fonts";
 import { TiClipboard } from "react-icons/ti";
 import { Menu } from "@/components/calltoaction.collection/Menu";
 import { useRef, useState , useEffect} from "react";
-import { ongDetails } from "@/models/ongdetails";
+import { externaldetailsbank, ongDetails } from "@/models/ongdetails";
+import Image from "next/image";
+import {Copy , TabletSmartphone} from "lucide-react";
 
 
 export default function HelpUs() {
+  console.log(externaldetailsbank?.CNPJ)
   const codePix = useRef<any>();
   const [isQrCode, setisQrCode] = useState<any>(false);
   const [QRCODEURL, setQRCODEURL] = useState<any>()
@@ -205,13 +208,19 @@ export default function HelpUs() {
               <span className="select-none">Copiar Chave Pix</span>
             </div>
           </div>
-    
+
           <span
             className={`${outfitFont.className} font-normal text-sm leading-6 text-[#1B1B1BCC]  self-center ml-2 mb-10 p-4 bg-[#FFBF69]  max-w-[400px]
             `}
           >
-            {isQrCode ?  <img src={QRCODEURL} alt="" /> : <span>{qrStatus.msg}</span>}
+            {isQrCode ? (
+              <img src={QRCODEURL} alt="" />
+            ) : (
+              <span>{qrStatus.msg}</span>
+            )}
           </span>
+
+    
         </div>
 
         <span
