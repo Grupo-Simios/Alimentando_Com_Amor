@@ -10,8 +10,9 @@ import { FooterMobile } from "../../footer.collection/footer/mobile";
 //home components imports
 import { HomeDesktop } from "../desktopHome";
 import { MobileHome } from "../mobile-home.colletion";
-import { OngActions } from "../ongActions";
 import { AboutAlimentandoComAmor } from "../AboutAlimentandoComAmor";
+import { OngActions } from "../ongActions";
+
 
 export const Home = () =>{
 
