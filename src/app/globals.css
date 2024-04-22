@@ -36,3 +36,31 @@
   border-radius: 8px;
 }
 
+@media screen and (min-width: 769px) {
+  .Images img {
+    width: 50rem;
+    margin: auto auto;
+    border-radius: 0px;
+    
+
+  }
+}
+
+
+.swiper{
+
+  position: relative;
+}
+
+.swiper-pagination{
+position: relative !important;
+margin-top: 1rem !important;
+}
+
+.swiper-pagination-bullet{
+
+  position: relative;
+  padding: 0.3rem;
+  background-color: #FF9F1C !important;
+  
+}

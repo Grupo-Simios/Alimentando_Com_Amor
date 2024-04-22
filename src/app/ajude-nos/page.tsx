@@ -3,16 +3,53 @@
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import { TiClipboard } from "react-icons/ti";
 import { Menu } from "@/components/calltoaction.collection/Menu";
-import { useRef, useState } from "react";
+import { useRef, useState , useEffect} from "react";
+import { externaldetailsbank, ongDetails } from "@/models/ongdetails";
+import Image from "next/image";
+import {Copy , TabletSmartphone} from "lucide-react";
+
 
 export default function HelpUs() {
+  console.log(externaldetailsbank?.CNPJ)
   const codePix = useRef<any>();
+  const [isQrCode, setisQrCode] = useState<any>(false);
+  const [QRCODEURL, setQRCODEURL] = useState<any>()
+  const qrStatus = {
+    msg : "Carregando Qr Code..."
+  }
 
   const copyClipboard = () => {
     navigator.clipboard
       .writeText(codePix.current.innerText)
       .then(() => alert("Copiado com sucesso"));
   };
+
+
+
+ useEffect(() => {
+
+    const createQr:{isQrCreate : boolean} = {isQrCreate : false};
+
+   const getQRCODE = async () => {
+
+    if(!createQr.isQrCreate) {
+     
+      try {
+        const QR = await fetch(
+          `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${ongDetails[0].bankDetails?.CNPJ}`
+        );
+        setisQrCode(!false)
+        setQRCODEURL(QR.url);
+        createQr.isQrCreate = !false
+        return;
+      } catch (error) {
+        console.log("Deu erro", error);
+     }
+    }
+    return
+   };
+   getQRCODE();
+ },[]);
 
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden">
@@ -164,20 +201,26 @@ export default function HelpUs() {
             <div
               onClick={copyClipboard}
               className={`${outfitFont.className} font-semibold leading-6  tracking-wide absolute w-full h-full flex items-center justify-center cursor-pointer 
-              rounded-lg items-center flex-col  top-[50%] left-[50%] translate-x-[-50%] bg-[#00000039] backdrop-blur-[2px] 
+              rounded-lg flex-col  top-[50%] left-[50%] translate-x-[-50%] bg-[#00000039] backdrop-blur-[3px] 
                translate-y-[-50%]  `}
             >
               <TiClipboard size={"50px"} />
-              <span className="select-none">Copiar código</span>
+              <span className="select-none">Copiar Chave Pix</span>
             </div>
           </div>
 
           <span
-            className={`${outfitFont.className} font-normal text-sm leading-6 text-[#1B1B1BCC]  self-center ml-2 mb-10 p-6 rounded-lg bg-[#FFBF69]  max-w-[400px]
+            className={`${outfitFont.className} font-normal text-sm leading-6 text-[#1B1B1BCC]  self-center ml-2 mb-10 p-4 bg-[#FFBF69]  max-w-[400px]
             `}
           >
-            <img src="https://github.com/DaviSC17.png" alt="" />
+            {isQrCode ? (
+              <img src={QRCODEURL} alt="" />
+            ) : (
+              <span>{qrStatus.msg}</span>
+            )}
           </span>
+
+    
         </div>
 
         <span
