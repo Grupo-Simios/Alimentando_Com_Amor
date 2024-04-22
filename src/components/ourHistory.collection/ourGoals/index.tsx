@@ -7,7 +7,8 @@ export const OurGoals = () => {
     `flex flex-col gap-8 p-4 mb-20`,
 
     /* Width change styles */
-    `max-[230px]:px-0 `
+    `max-[230px]:px-0 `,
+    'md:w-1/2'
   );
 
   const SubTittleOurGoals = clsx(
@@ -15,12 +16,13 @@ export const OurGoals = () => {
     `${ZillaFont.className} py-2 border-b-[2px] border-[#FF9F1C] font-normal text-2xl leading-6 text-[#1b1b1bCC] `,
 
     /* Width change styles */
-    `    
+    `
     max-[185px]:text-center
     max-[185px]:text-base
     max-[185px]:w-32
     max-[235px]:text-lg
-    `
+    `,
+    'md:text-center'
   );
 
   const TextMainOurGoals = clsx(
