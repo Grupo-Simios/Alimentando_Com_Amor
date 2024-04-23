@@ -23,9 +23,10 @@ export default function OurHistory() {
 
       <AboutUsOurHistory />
 
+      <div className="flex gap-12 flex-col justify-center items-center md:flex-col-reverse">
       <SendDonation />
-
       <WhoWeHelps />
+      </div>
 
       <OurGoals />
     </div>

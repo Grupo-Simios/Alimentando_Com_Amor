@@ -29,6 +29,7 @@ const config: Config = {
         "primary-black-text" : "#1B1B1B",
         "branco-semi": "F9F6EE"
         
+        
       }
       
     },
