@@ -1,6 +1,8 @@
 <!-- 
 GITFLOWS
 
+CREATE : Indicam criação de algum componente
+
 STYLE : Indicam que houveram alterações
 referentes a formatações de código,
 semicolons, trailing spaces, lint ...
