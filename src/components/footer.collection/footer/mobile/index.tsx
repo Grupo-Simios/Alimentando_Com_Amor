@@ -3,6 +3,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { ZillaFont, outfitFont } from "@/assets/fonts/index";
 import Link from "next/link";
 import clsx from "clsx";
+import { contactDetails } from "@/models/ongdetails";
 
 export const FooterMobile = () => {
 
@@ -53,14 +54,14 @@ const footerText = clsx(
           siga-nos nas redes
         </h2>
         <div className="flex h-fit gap-6 items-center justify-center">
-          <a href="#">
+          <a href="https://facebook.com/cyda.lima.35" target="_blanck">
             <FaFacebook
               color="#f5f5f5"
               className="text-5xl max-[195px]:text-2xl max-[285px]:text-4xl"
             />
           </a>
 
-          <a href="#">
+          <a href={"https://www.instagram.com/alimentandocomamornatal/"} target="_blanck" >
             <FaInstagram
               color="#f5f5f5"
               className="text-5xl max-[195px]:text-2xl max-[285px]:text-4xl"
@@ -104,8 +105,9 @@ const footerText = clsx(
               size={"20px"}
               className="max-[320px]:hidden"
             />
-            Número de telefone: 84 9873-6833
+           <a href={contactDetails.linkWhatsapp1}> Número de telefone: {contactDetails.tel1}</a>
           </p>
+      
 
           <p
             className={`${outfitFont.className} ${footerText} font-normal  leading-4  text-[#f5f5f5] text-xs rounded-lg flex gap-3 items-center   
@@ -130,7 +132,7 @@ const footerText = clsx(
 
             E-mail:
             <br />
-            voluntário@alimentandocomamornatal.org
+            {contactDetails.volunteerEmail}
           </p>
         </div>
       </div>
