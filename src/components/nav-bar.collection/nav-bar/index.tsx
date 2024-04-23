@@ -1,11 +1,12 @@
+
+ "use client" 
 import Link from "next/link"
 import clsx from "clsx"
 import { ZillaFont } from "@/assets/fonts"
+import { useState } from "react"
 
 export default function NavBarTop(){
-
-
-
+  
   const navBar = clsx(
     'hidden bg-navbar-Yellow flex justify-around',
     'md:flex  md:justify-end',
@@ -23,6 +24,7 @@ export default function NavBarTop(){
     'md:w-[90%]',
     'xl:w-[60%]'
   )
+
   const navItems = clsx(
     "w-[20%] text-center h-14 grid place-content-center hover:bg-yellow-primaty-hover text-primary-black-text text-base font-semibold hover:text-white rounded-b-[8px]",
     "last:bg-navbar-newblue last:text-white last:hover:bg-[#092934] last:rounded-b-[8px] ",
@@ -30,28 +32,32 @@ export default function NavBarTop(){
     'xl:px-2 xl:w-[18%]'
   );
 
+  const menuItems = [
+    { title: "Pagina inicial", link: "/", isSelected: false },
+    { title: "Nossa História", link: "/nossa-historia", isSelected: false },
+    { title: "ajude-nos", link: "/ajude-nos", isSelected: false },
+    { title: "Contato", link: "/contato", isSelected: false },
+    { title: "Grupo Simios", link: "/grupo-simios", isSelected: false },
+  ];
 
   return(
+<>
 
     <nav className={`${ZillaFont.className} ${navBar} `}>
       <span className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</span>
     <ul className={ulnavBar}>
-      <Link  href={"/"} className={navItems}>
-        <li>Página inicial</li>
-      </Link>
-      <Link className={navItems} href={"/nossa-historia"}>
-        <li>Nossa história</li>
-      </Link>
-      <Link className={navItems} href={"/ajude-nos"}>
-        <li>Ajude-nos</li>
-      </Link>
-      <Link className={navItems} href={"/contato"}>
-        <li>Contato</li>
-      </Link>
-      <Link className={navItems} href={"/grupo-simios"}>
-        <li>Grupo Símios</li>
-      </Link>
+  {
+        menuItems.map((item,index)=>(
+          <Link key={index} className={navItems} href={item.link} >
+            <li>
+              {item.title}
+            </li>
+          </Link>
+        ))
+      }
     </ul>
   </nav>
+</>
   )
 }
+      
