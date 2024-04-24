@@ -9,6 +9,7 @@ import clsx from "clsx";
 import Title from "@/components/titles/title";
 import Paragraph from "@/components/home.collection/paragraph/paragraph";
 import Header from "@/components/headerMobile/header";
+import Button from "@/components/home.collection/CalltoactionButton/button";
 
 
 export default function HelpUs() {
@@ -28,31 +29,6 @@ export default function HelpUs() {
 
 
 
-
-//  useEffect(() => {
-
-//     const createQr:{isQrCreate : boolean} = {isQrCreate : false};
-
-//    const getQRCODE = async () => {
-
-//     if(!createQr.isQrCreate) {
-     
-//       try {
-//         const QR = await fetch(
-//           `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${ongDetails[0].bankDetails?.CNPJ}`
-//         );
-//         setisQrCode(!false)
-//         setQRCODEURL(QR.url);
-//         createQr.isQrCreate = !false
-//         return;
-//       } catch (error) {
-//         console.log("Deu erro", error);
-//      }
-//     }
-//     return
-//    };
-//    getQRCODE();
-//  },[]);
 
 const titleHelpUs = clsx(
   "text-2xl leading-7 p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]",
@@ -90,18 +66,11 @@ const titleHelpUs = clsx(
           voluntário. Ficaremos muito felizes de ter seu apoio!
         </Paragraph>
 
-        <button
-          className={`${outfitFont.className} font-normal text-2xl bg-[#FF9F1C] text-[#f5f5f5] leading-6 rounded-lg w-fit self-center px-6 py-3
-          
-          max-[325px]:text-xl max-[285px]:text-lg max-[270px]:text-base
-          max-[250px]:text-sm max-[235px]:text-xs
-          max-[190px]:px-4 max-[175px]:text-[10px] max-[175px]:font-bold
-          max-[160px]:px-2
+<Button>
+Quero ser voluntário
+</Button>
 
-          `}
-        >
-          Quero ser voluntário
-        </button>
+
       </section>
 
       <section

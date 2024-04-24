@@ -1,7 +1,7 @@
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
 
-export const OurGoals = () => {
+export default function OurGoals(){
   const OurGoalsSection = clsx(
     /* Base styles */
     `flex flex-col gap-8 p-4 mb-20`,

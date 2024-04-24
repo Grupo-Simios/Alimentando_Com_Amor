@@ -2,7 +2,7 @@ import { outfitFont } from "@/assets/fonts";
 
 import clsx from "clsx";
 
-export const WhoWeHelps = () => {
+export default function WhoWeHelps(){
   const WhoWeHelpsSection = clsx(
     /* Base styles */
     `flex items-center justify-center  mx-4 p-4 border-b-[6px] max-w-[500px] border-r-[6px] border-[#FF9F1C]  w-[80%]`,

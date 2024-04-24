@@ -1,8 +1,8 @@
 
-import { AboutUsOurHistory } from "@/components/Ourhistory.collection/aboutUs";
-import { SendDonation } from "@/components/Ourhistory.collection/sendDonation";
-import { WhoWeHelps } from "@/components/Ourhistory.collection/whoWeHelps";
-import { OurGoals } from "@/components/Ourhistory.collection/ourGoals";
+import AboutUsOurHistory from "@/components/Ourhistory.collection/aboutUs";
+import SendDonation from "@/components/Ourhistory.collection/sendDonation";
+import WhoWeHelps from "@/components/Ourhistory.collection/whoWeHelps";
+import OurGoals from "@/components/Ourhistory.collection/ourGoals";
 import clsx from "clsx";
 import Header from "@/components/headerMobile/header";
 

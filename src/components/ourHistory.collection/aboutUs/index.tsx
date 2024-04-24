@@ -2,7 +2,7 @@ import { ZillaFont, outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
 import Paragraph from "@/components/home.collection/paragraph/paragraph";
 
-export const AboutUsOurHistory = () => {
+export default function AboutUsOurHistory(){
   const sectionAboutUs = clsx(
     `flex flex-col gap-6 mt-24 px-5`,
     `max-[200px]:mt-14 md:w-1/2`

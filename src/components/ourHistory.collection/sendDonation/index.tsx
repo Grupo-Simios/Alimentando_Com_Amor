@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { HandHeart, HeartHandshake } from "lucide-react";
 import Button from "@/components/home.collection/CalltoactionButton/button";
 
-export const SendDonation = () => {
+export default function SendDonation(){
   const SendDonationSections = clsx(
     `flex pb-4 gap-10 flex-col mt-10 mx-4 w-fit border-[6px] border-[#FF9F1C] `,
     `max-[250px]:w-[100%] max-[250px]:mx-0`,
