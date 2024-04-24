@@ -6,6 +6,8 @@ import { ZillaFont } from "@/assets/fonts";
 import { useState } from "react";
 import Link from "next/link";
 
+
+
 export const Menu = () => {
   const [openMenu, setopenMenu] = useState(false);
 
@@ -30,9 +32,9 @@ export const Menu = () => {
       />
 
       {openMenu ? (
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-end relative">
           <IoClose
-          title="Fechar menu"
+            title="Fechar menu"
             className={`
             block 
             text-[30px]
@@ -44,10 +46,10 @@ export const Menu = () => {
           />
 
           <nav
-            className="flex absolute top-16 w-[70%]
+            className={`flex absolute top-8 w-[70%]
           
           max-[180px]:w-[90%] 
-          xsm:w-80"
+          xsm:w-80`}
           >
             <ul className="flex flex-col w-full rounded-lg">
               <li>
@@ -85,7 +87,7 @@ export const Menu = () => {
               <li>
                 <Link
                   className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#2C70A6] items-center justify-center rounded-b-lg`}
-                  href={"/simios"}
+                  href={"/grupo-simios"}
                 >
                   Grupo Simios
                 </Link>
