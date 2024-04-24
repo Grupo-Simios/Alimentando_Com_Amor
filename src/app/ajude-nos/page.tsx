@@ -2,18 +2,19 @@
 
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import { TiClipboard } from "react-icons/ti";
-import { Menu } from "@/components/calltoaction.collection/Menu";
 import { useRef, useState , useEffect} from "react";
-import { externaldetailsbank, ongDetails } from "@/models/ongdetails";
+// import { externaldetailsbank, ongDetails } from "@/models/ongdetails";
 import Image from "next/image";
-import {Copy , TabletSmartphone} from "lucide-react";
+import clsx from "clsx";
+import Title from "@/components/titles/title";
+import Paragraph from "@/components/home.collection/paragraph/paragraph";
+import Header from "@/components/headerMobile/header";
 
 
 export default function HelpUs() {
-  console.log(externaldetailsbank?.CNPJ)
   const codePix = useRef<any>();
   const [isQrCode, setisQrCode] = useState<any>(false);
-  const [QRCODEURL, setQRCODEURL] = useState<any>()
+  const [QRCODEURL, setQRCODEURL] = useState<any>("olá")
   const qrStatus = {
     msg : "Carregando Qr Code..."
   }
@@ -26,52 +27,41 @@ export default function HelpUs() {
 
 
 
- useEffect(() => {
 
-    const createQr:{isQrCreate : boolean} = {isQrCreate : false};
 
-   const getQRCODE = async () => {
+//  useEffect(() => {
 
-    if(!createQr.isQrCreate) {
+//     const createQr:{isQrCreate : boolean} = {isQrCreate : false};
+
+//    const getQRCODE = async () => {
+
+//     if(!createQr.isQrCreate) {
      
-      try {
-        const QR = await fetch(
-          `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${ongDetails[0].bankDetails?.CNPJ}`
-        );
-        setisQrCode(!false)
-        setQRCODEURL(QR.url);
-        createQr.isQrCreate = !false
-        return;
-      } catch (error) {
-        console.log("Deu erro", error);
-     }
-    }
-    return
-   };
-   getQRCODE();
- },[]);
+//       try {
+//         const QR = await fetch(
+//           `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${ongDetails[0].bankDetails?.CNPJ}`
+//         );
+//         setisQrCode(!false)
+//         setQRCODEURL(QR.url);
+//         createQr.isQrCreate = !false
+//         return;
+//       } catch (error) {
+//         console.log("Deu erro", error);
+//      }
+//     }
+//     return
+//    };
+//    getQRCODE();
+//  },[]);
+
+const titleHelpUs = clsx(
+  "text-2xl leading-7 p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]",
+ " max-[245px]:text-base max-[210px]:text-sm max-[175px]:text-[10px] max-[175px]:font-bold"
+)
 
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden">
-      <header
-        className="flex   w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
-           md:hidden
-    max-[200px]:h-10
-    "
-      >
-        <h1
-          className={`${outfitFont.className} uppercase absolute flex  gap-3 items-center z-[-1] justify-center inset-0 text-xl 
-        
-        max-[200px]:text-[10px]
-        max-[210px]:px-0
-      
-        xsm:text-2xl
-         max-[320px]:text-base`}
-        >
-          Ajude-nos
-        </h1>
-        <Menu />
-      </header>
+      <Header>Ajude-nos</Header>
 
       <section
         className="flex self-center flex-col gap-5 px-5 mt-24
@@ -82,55 +72,30 @@ export default function HelpUs() {
       
       "
       >
-        <span
-          className={`${ZillaFont.className} text-xl leading-7 text-[#1B1B1BCC] p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]
-          
-          max-[245px]:text-base
-          max-[210px]:text-sm
-          max-[175px]:text-[10px]
-          max-[175px]:font-bold
-          
-          `}
+        <Title
+          align="center"
+          className={`${ZillaFont.className} ${titleHelpUs}`}
         >
-          SEJA VOLUNTÁRIO
-        </span>
+          Seja Voluntário
+        </Title>
 
-        <p
-          className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC]
-          
-          max-[245px]:text-sm
-          max-[210px]:text-xs
-          max-[170px]:text-[10px]
-          `}
-        >
+        <Paragraph>
           Estamos sempre precisando de mais pessoas dispostas a ajudar com esse
           inestimável trabalho de base, sem a qual muitos cidadãos estariam
           completamente desamparados.
-        </p>
+        </Paragraph>
 
-        <p
-          className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC] mb-4
-          
-          max-[245px]:text-sm
-          max-[210px]:text-xs
-          max-[170px]:text-[10px]
-          `}
-        >
+        <Paragraph>
           Clicando no botão abaixo você acessará o formulário de cadastro de
           voluntário. Ficaremos muito felizes de ter seu apoio!
-        </p>
+        </Paragraph>
 
         <button
           className={`${outfitFont.className} font-normal text-2xl bg-[#FF9F1C] text-[#f5f5f5] leading-6 rounded-lg w-fit self-center px-6 py-3
           
-          max-[325px]:text-xl
-          max-[285px]:text-lg
-          max-[270px]:text-base
-          max-[250px]:text-sm
-          max-[235px]:text-xs
-          max-[190px]:px-4
-          max-[175px]:text-[10px]
-          max-[175px]:font-bold
+          max-[325px]:text-xl max-[285px]:text-lg max-[270px]:text-base
+          max-[250px]:text-sm max-[235px]:text-xs
+          max-[190px]:px-4 max-[175px]:text-[10px] max-[175px]:font-bold
           max-[160px]:px-2
 
           `}
@@ -147,29 +112,17 @@ export default function HelpUs() {
       xsm:max-w-[520px]
       "
       >
-        <span
-          className={`${ZillaFont.className} text-xl leading-7 text-[#1B1B1BCC] p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]
-          
-          max-[245px]:text-base
-          max-[210px]:text-sm
-          max-[175px]:text-[10px]
-          max-[175px]:font-bold
-          `}
+        <Title
+          align="center"
+          className={`${ZillaFont.className} ${titleHelpUs}`}
         >
-          FAÇA UMA DOAÇÃO
-        </span>
+          Faça uma Doação
+        </Title>
 
-        <p
-          className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC] ml-2 mb-10
-          
-          max-[245px]:text-sm
-          max-[210px]:text-xs
-          max-[170px]:text-[10px]
-          `}
-        >
+        <Paragraph>
           Escaneie o código QR ou copie o código abaixo e cole no aplicativo do
           seu banco para fazer um pix de qualquer valor.
-        </p>
+        </Paragraph>
 
         <div className="flex flex-col w-fit mx-auto">
           <div className="flex flex-col w-fit relative self-center mb-10 ">
@@ -219,8 +172,6 @@ export default function HelpUs() {
               <span>{qrStatus.msg}</span>
             )}
           </span>
-
-    
         </div>
 
         <span

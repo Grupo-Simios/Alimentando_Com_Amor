@@ -4,37 +4,26 @@ import Paragraph from "@/components/home.collection/paragraph/paragraph";
 
 export const AboutUsOurHistory = () => {
   const sectionAboutUs = clsx(
-    /* Base styles */
     `flex flex-col gap-6 mt-24 px-5`,
-
-    /* Width change styles */
     `max-[200px]:mt-14 md:w-1/2`
   );
 
   const SubTitleWhoWeAre = clsx(
-    /* Base styles */
     `${ZillaFont.className} text-2xl pb-2 border-b-[2px] leading-7 border-[#FF9F1C] font-normal `,
     'md:text-center',
-
-    /* Width change styles */
     `max-[200px]:text-base max-[210px]:text-lg`
   );
 
   const TextAboutUs = clsx(
-    /* Base styles */
     `${outfitFont.className} font-normal text-lg leading-6 `,
-
-    /* Width change styles */
     `max-[250px]:text-sm`
   );
 
   const textEmphasis = clsx(
-    /* Base styles */
     `${outfitFont.className} text-xl leading-6 font-bold`,
-
-    /* Width change styles */
     `max-[250px]:text-sm`
   );
+  
 
   return (
     <section className={sectionAboutUs}>

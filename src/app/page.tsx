@@ -1,6 +1,5 @@
 
 import "./globals.css";
-
 // components exports
 import { Home } from "../components/home.collection/heroBanner";
 

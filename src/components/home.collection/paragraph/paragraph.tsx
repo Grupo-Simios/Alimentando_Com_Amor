@@ -13,7 +13,8 @@ export default function Paragraph({
   ...props
 }: IParagraphProps) {
   const paragraphClasses = clsx(
-    "text-lg md:mb-4 leading-6",
+    "text-lg md:mb-4 leading-6 text-[#1B1B1BCC] mb-4",
+    'max-[245px]:text-sm max-[210px]:text-xs max-[170px]:text-[10px]',    
     outfitFont.className, 
     { "font-bold": boldText } 
   );

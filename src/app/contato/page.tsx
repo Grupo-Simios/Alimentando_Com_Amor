@@ -3,8 +3,8 @@
 import { useRef } from "react";
 import clsx from "clsx";
 import { PhonesContacts } from "@/components/contact.collection/phones";
-import { HeaderContact } from "@/components/contact.collection/header";
 import { LocationMap } from "@/components/contact.collection/location";
+import Header from "@/components/headerMobile/header";
 
 export default function Contact() {
 
@@ -16,10 +16,8 @@ export default function Contact() {
 
   return (
     <div className={contactContainer}>
-      <HeaderContact />
-
+      <Header>Contato</Header>
       <PhonesContacts />
-
       <LocationMap />
     </div>
   );
