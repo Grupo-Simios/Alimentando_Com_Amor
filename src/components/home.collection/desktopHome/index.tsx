@@ -1,6 +1,7 @@
 import reponsiveSizeDesktop from '@/components/home.collection/style/responsive/desktop/md.module.css'
 import Link from 'next/link'
 import clsx from 'clsx'
+import Button from '../CalltoactionButton/button';
 export const HomeDesktop = () =>{
 
   const heroContainer = clsx(
@@ -22,19 +23,19 @@ export const HomeDesktop = () =>{
   'md:border-8 md:border-[#1B1B1B8c] md:-[90%] md:p-8 md:flex md:flex-col md:gap-8 md:h-60 md:text-center md:items-center',
     'md:ml-auto md:mr-auto'
   )
-  return(
+  return (
     <section className={heroContainer}>
-       <section className={bannerHeroHome}>
+      <section className={bannerHeroHome}>
         <div className={divHomeComponents}>
-        <header className={headerHomecomponents}>
-          <h1 className="text-5xl font-[inter] ">
-            ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span>
-          </h1>
-          <h3 className="text-2xl">
-            Distribuição de cestas básicas e marmitas para pessoas vulneráveis
-            ou em situação de rua
-          </h3>
-        </header>
+          <header className={headerHomecomponents}>
+            <h1 className="text-5xl font-[inter] ">
+              ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span>
+            </h1>
+            <h3 className="text-2xl">
+              Distribuição de cestas básicas e marmitas para pessoas vulneráveis
+              ou em situação de rua
+            </h3>
+          </header>
 
           <div className="flex gap-8 text-xl font-semibold text-[1B1B1B]  justify-center mt-[48px]">
             <li className="list-none">ações voluntárias</li>
@@ -44,23 +45,11 @@ export const HomeDesktop = () =>{
 
           <div className="font-bold text-xl flex gap-4 justify-center mt-[64px]">
             <Link href={"/ajude-nos"}>
-              <div
-                className="bg-yellow-primary h-12 w-72 text-center grid place-content-center
-              hover:bg-yellow-primaty-hover
-             text-white rounded-lg cursor-pointer"
-              >
-                Ajude-nos
-              </div>
+              <Button>ajude-nos</Button>
             </Link>
-            <Link href={"/simios"}>
-              <div
-                className="border-2 border-yellow-primary h-12 w-72 text-center grid place-content-center
-             text-primary-black-text rounded-lg cursor-pointer hover:border-yellow-primaty-hover "
-              >
-                Conheça o projeto
-              </div>
+            <Link href={"/nossa-historia"}>
+              <Button backGround={true}>Conheça o projeto</Button>
             </Link>
-            {/* <div className="bg-red-400">Conheça o projeto</div> */}
           </div>
         </div>
       </section>

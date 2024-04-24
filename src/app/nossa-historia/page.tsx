@@ -1,12 +1,9 @@
 
-import { AboutUsOurHistory } from "@/components/ourHistory.collection/aboutUs";
-import { OurGoals } from "@/components/ourHistory.collection/ourGoals/";
-import { SendDonation } from "@/components/ourHistory.collection/sendDonation";
-
-import { WhoWeHelps } from "@/components/ourHistory.collection/whoWeHelps/";
-
-import { HeaderOurHistory } from "@/components/ourHistory.collection/header";
-
+import { HeaderOurHistory } from "@/components/Ourhistory.collection/header";
+import { AboutUsOurHistory } from "@/components/Ourhistory.collection/aboutUs";
+import { SendDonation } from "@/components/Ourhistory.collection/sendDonation";
+import { WhoWeHelps } from "@/components/Ourhistory.collection/whoWeHelps";
+import { OurGoals } from "@/components/Ourhistory.collection/ourGoals";
 import clsx from "clsx";
 
 export default function OurHistory() {
