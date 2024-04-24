@@ -12,6 +12,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { urlImgdata } from "@/models/urlImgSwiper.model";
 import clsx from "clsx";
+import Paragraph from "../paragraph/paragraph";
 
 
 export const AboutAlimentandoComAmor = () =>{
@@ -34,10 +35,6 @@ export const AboutAlimentandoComAmor = () =>{
 
   )
 
-  const paragraph = clsx(
-    "font-normal text-lg",
-    "md:mb-4"
-  )
 
   const heroArticleContainer = clsx(
     "flex w-full flex-col gap-5 bg-[#F9F6EE]",
@@ -74,23 +71,24 @@ export const AboutAlimentandoComAmor = () =>{
         </h1>
 
         <article className={heroArticleContainer}>
-          <p className={`${outfitFont.className} ${paragraph}`}>
-            Há mais de cinco anos trabalhando em prol dos mais necessitados
-          </p>
-          <p className={`${outfitFont.className} ${paragraph}`}>
-            Realizamos várias ações com as pessoas menos favorecidas, que por
+
+          <Paragraph>
+          Há mais de cinco anos trabalhando em prol dos mais necessitados
+          </Paragraph>
+         <Paragraph>
+         Realizamos várias ações com as pessoas menos favorecidas, que por
             muitas razões se encontram em condições vulneráveis (drogas,
             alcoolismo, problemas psiquiátricos, violência familiar, entre
             muitos outros).
-          </p>
-          <p className={`${outfitFont.className} ${paragraph}`}>
-            Nossa associação se destina a ajudar, orientar e amparar pessoas em
+         </Paragraph>
+         <Paragraph>
+         Nossa associação se destina a ajudar, orientar e amparar pessoas em
             situação de rua ou com recursos escassos, fornecendo um lugar para
             dormir e alimentação (café da manhã, almoço e janta).
-          </p>
-          <p className={`${outfitFont.className} ${paragraph}`}>
-            Fornecemos marmitas em diversos pontos da Cidade Alta e arredores.
-          </p>
+         </Paragraph>
+         <Paragraph>
+         Fornecemos marmitas em diversos pontos da Cidade Alta e arredores.
+         </Paragraph>
         </article>
       </section>
     </>
