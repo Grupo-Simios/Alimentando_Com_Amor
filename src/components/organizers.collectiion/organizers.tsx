@@ -9,7 +9,7 @@ interface profile {
   image: string;
 }
 
-export const Organizer = (profile: profile) => {
+export const Members = (profile: profile) => {
   return (
     <div className="flex flex-col w-fit gap-5  justify-center items-center">
       <figure className="max-w-52 max-[310px]:px-4">
