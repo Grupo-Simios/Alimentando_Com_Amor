@@ -1,6 +1,5 @@
 "use client";
 
-import { HeaderSimios } from "@/components/simios.collection/header";
 import { AboutSimios } from "@/components/simios.collection/aboutSimios";
 import { AboutProject } from "@/components/simios.collection/aboutProject";
 import { Organizers } from "@/components/simios.collection/organizers";
@@ -14,7 +13,6 @@ export default function Simios() {
   );
   return (
     <div className={Container}>
-      <HeaderSimios />
 
       <AboutSimios />
 

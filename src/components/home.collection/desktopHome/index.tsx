@@ -45,10 +45,10 @@ export const HomeDesktop = () =>{
 
           <div className="font-bold text-xl flex gap-4 justify-center mt-[64px]">
             <Link href={"/ajude-nos"}>
-              <Button>ajude-nos</Button>
+              <Button backGround='primary'>ajude-nos</Button>
             </Link>
             <Link href={"/nossa-historia"}>
-              <Button backGround={true}>Conheça o projeto</Button>
+              <Button backGround="second">Conheça o projeto</Button>
             </Link>
           </div>
         </div>

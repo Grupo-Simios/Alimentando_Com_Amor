@@ -25,7 +25,7 @@ const config: Config = {
         "navbar-pinkBackground": "#FFDDE1",
         "navbar-newblue": "#114B5F",
         "yellow-primary": "#FF9F1C",
-        "yellow-primaty-hover" : "#f97c07",
+        "yellow-primary-hover" : "#f97c07",
         "primary-black-text" : "#1B1B1B",
         "branco-semi": "F9F6EE"
         

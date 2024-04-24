@@ -2,18 +2,16 @@
 
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import { TiClipboard } from "react-icons/ti";
-import { Menu } from "@/components/calltoaction.collection/Menu";
 import { useRef, useState , useEffect} from "react";
-import { externaldetailsbank, ongDetails } from "@/models/ongdetails";
+// import { externaldetailsbank, ongDetails } from "@/models/ongdetails";
 import Image from "next/image";
-import {Copy , TabletSmartphone} from "lucide-react";
-import Button from "@/components/home.collection/CalltoactionButton/button";
 import clsx from "clsx";
 import Title from "@/components/titles/title";
+import Paragraph from "@/components/home.collection/paragraph/paragraph";
+import Header from "@/components/headerMobile/header";
 
 
 export default function HelpUs() {
-  console.log(externaldetailsbank?.CNPJ)
   const codePix = useRef<any>();
   const [isQrCode, setisQrCode] = useState<any>(false);
   const [QRCODEURL, setQRCODEURL] = useState<any>("olá")
@@ -63,19 +61,7 @@ const titleHelpUs = clsx(
 
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden">
-
-      {/* componentizar esse componente */}
-      <header
-        className="flex w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
-           md:hidden max-[200px]:h-10">
-        <h1
-          className={`${outfitFont.className} uppercase absolute flex  gap-3 items-center z-[-1] justify-center inset-0 text-xl 
-        max-[200px]:text-[10px] max-[210px]:px-0 xsm:text-2xl max-[320px]:text-base`}>
-          Ajude-nos
-        </h1>
-
-        <Menu />
-      </header>
+      <Header>Ajude-nos</Header>
 
       <section
         className="flex self-center flex-col gap-5 px-5 mt-24
@@ -86,35 +72,23 @@ const titleHelpUs = clsx(
       
       "
       >
-     
-     <Title align="center" className={`${ZillaFont.className} ${titleHelpUs}`}>
+        <Title
+          align="center"
+          className={`${ZillaFont.className} ${titleHelpUs}`}
+        >
           Seja Voluntário
         </Title>
 
-        <p
-          className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC]
-          
-          max-[245px]:text-sm
-          max-[210px]:text-xs
-          max-[170px]:text-[10px]
-          `}
-        >
+        <Paragraph>
           Estamos sempre precisando de mais pessoas dispostas a ajudar com esse
           inestimável trabalho de base, sem a qual muitos cidadãos estariam
           completamente desamparados.
-        </p>
+        </Paragraph>
 
-        <p
-          className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC] mb-4
-          
-          max-[245px]:text-sm
-          max-[210px]:text-xs
-          max-[170px]:text-[10px]
-          `}
-        >
+        <Paragraph>
           Clicando no botão abaixo você acessará o formulário de cadastro de
           voluntário. Ficaremos muito felizes de ter seu apoio!
-        </p>
+        </Paragraph>
 
         <button
           className={`${outfitFont.className} font-normal text-2xl bg-[#FF9F1C] text-[#f5f5f5] leading-6 rounded-lg w-fit self-center px-6 py-3
@@ -128,7 +102,6 @@ const titleHelpUs = clsx(
         >
           Quero ser voluntário
         </button>
-
       </section>
 
       <section
@@ -139,23 +112,17 @@ const titleHelpUs = clsx(
       xsm:max-w-[520px]
       "
       >
-   
-        <Title align="center" className={`${ZillaFont.className} ${titleHelpUs}`}>
+        <Title
+          align="center"
+          className={`${ZillaFont.className} ${titleHelpUs}`}
+        >
           Faça uma Doação
         </Title>
-        
 
-        <p
-          className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC] ml-2 mb-10
-          
-          max-[245px]:text-sm
-          max-[210px]:text-xs
-          max-[170px]:text-[10px]
-          `}
-        >
+        <Paragraph>
           Escaneie o código QR ou copie o código abaixo e cole no aplicativo do
           seu banco para fazer um pix de qualquer valor.
-        </p>
+        </Paragraph>
 
         <div className="flex flex-col w-fit mx-auto">
           <div className="flex flex-col w-fit relative self-center mb-10 ">
@@ -205,8 +172,6 @@ const titleHelpUs = clsx(
               <span>{qrStatus.msg}</span>
             )}
           </span>
-
-    
         </div>
 
         <span

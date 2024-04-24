@@ -1,10 +1,10 @@
 
-import { HeaderOurHistory } from "@/components/Ourhistory.collection/header";
 import { AboutUsOurHistory } from "@/components/Ourhistory.collection/aboutUs";
 import { SendDonation } from "@/components/Ourhistory.collection/sendDonation";
 import { WhoWeHelps } from "@/components/Ourhistory.collection/whoWeHelps";
 import { OurGoals } from "@/components/Ourhistory.collection/ourGoals";
 import clsx from "clsx";
+import Header from "@/components/headerMobile/header";
 
 export default function OurHistory() {
   const ContainerOurHistory = clsx(
@@ -16,7 +16,7 @@ export default function OurHistory() {
   );
   return (
     <div className={ContainerOurHistory}>
-      <HeaderOurHistory />
+    <Header>Nossa História</Header>
       <AboutUsOurHistory />
       <div className="flex gap-12 flex-col justify-center items-center md:flex-col-reverse">
       <SendDonation />
