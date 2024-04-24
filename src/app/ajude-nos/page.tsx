@@ -7,13 +7,16 @@ import { useRef, useState , useEffect} from "react";
 import { externaldetailsbank, ongDetails } from "@/models/ongdetails";
 import Image from "next/image";
 import {Copy , TabletSmartphone} from "lucide-react";
+import Button from "@/components/home.collection/CalltoactionButton/button";
+import clsx from "clsx";
+import Title from "@/components/titles/title";
 
 
 export default function HelpUs() {
   console.log(externaldetailsbank?.CNPJ)
   const codePix = useRef<any>();
   const [isQrCode, setisQrCode] = useState<any>(false);
-  const [QRCODEURL, setQRCODEURL] = useState<any>()
+  const [QRCODEURL, setQRCODEURL] = useState<any>("olá")
   const qrStatus = {
     msg : "Carregando Qr Code..."
   }
@@ -26,50 +29,51 @@ export default function HelpUs() {
 
 
 
- useEffect(() => {
 
-    const createQr:{isQrCreate : boolean} = {isQrCreate : false};
 
-   const getQRCODE = async () => {
+//  useEffect(() => {
 
-    if(!createQr.isQrCreate) {
+//     const createQr:{isQrCreate : boolean} = {isQrCreate : false};
+
+//    const getQRCODE = async () => {
+
+//     if(!createQr.isQrCreate) {
      
-      try {
-        const QR = await fetch(
-          `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${ongDetails[0].bankDetails?.CNPJ}`
-        );
-        setisQrCode(!false)
-        setQRCODEURL(QR.url);
-        createQr.isQrCreate = !false
-        return;
-      } catch (error) {
-        console.log("Deu erro", error);
-     }
-    }
-    return
-   };
-   getQRCODE();
- },[]);
+//       try {
+//         const QR = await fetch(
+//           `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${ongDetails[0].bankDetails?.CNPJ}`
+//         );
+//         setisQrCode(!false)
+//         setQRCODEURL(QR.url);
+//         createQr.isQrCreate = !false
+//         return;
+//       } catch (error) {
+//         console.log("Deu erro", error);
+//      }
+//     }
+//     return
+//    };
+//    getQRCODE();
+//  },[]);
+
+const titleHelpUs = clsx(
+  "text-2xl leading-7 p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]",
+ " max-[245px]:text-base max-[210px]:text-sm max-[175px]:text-[10px] max-[175px]:font-bold"
+)
 
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden">
+
+      {/* componentizar esse componente */}
       <header
-        className="flex   w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
-           md:hidden
-    max-[200px]:h-10
-    "
-      >
+        className="flex w-full h-16 justify-end items-center backdrop-blur fixed  px-1 
+           md:hidden max-[200px]:h-10">
         <h1
           className={`${outfitFont.className} uppercase absolute flex  gap-3 items-center z-[-1] justify-center inset-0 text-xl 
-        
-        max-[200px]:text-[10px]
-        max-[210px]:px-0
-      
-        xsm:text-2xl
-         max-[320px]:text-base`}
-        >
+        max-[200px]:text-[10px] max-[210px]:px-0 xsm:text-2xl max-[320px]:text-base`}>
           Ajude-nos
         </h1>
+
         <Menu />
       </header>
 
@@ -82,18 +86,10 @@ export default function HelpUs() {
       
       "
       >
-        <span
-          className={`${ZillaFont.className} text-xl leading-7 text-[#1B1B1BCC] p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]
-          
-          max-[245px]:text-base
-          max-[210px]:text-sm
-          max-[175px]:text-[10px]
-          max-[175px]:font-bold
-          
-          `}
-        >
-          SEJA VOLUNTÁRIO
-        </span>
+     
+     <Title align="center" className={`${ZillaFont.className} ${titleHelpUs}`}>
+          Seja Voluntário
+        </Title>
 
         <p
           className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC]
@@ -123,20 +119,16 @@ export default function HelpUs() {
         <button
           className={`${outfitFont.className} font-normal text-2xl bg-[#FF9F1C] text-[#f5f5f5] leading-6 rounded-lg w-fit self-center px-6 py-3
           
-          max-[325px]:text-xl
-          max-[285px]:text-lg
-          max-[270px]:text-base
-          max-[250px]:text-sm
-          max-[235px]:text-xs
-          max-[190px]:px-4
-          max-[175px]:text-[10px]
-          max-[175px]:font-bold
+          max-[325px]:text-xl max-[285px]:text-lg max-[270px]:text-base
+          max-[250px]:text-sm max-[235px]:text-xs
+          max-[190px]:px-4 max-[175px]:text-[10px] max-[175px]:font-bold
           max-[160px]:px-2
 
           `}
         >
           Quero ser voluntário
         </button>
+
       </section>
 
       <section
@@ -147,17 +139,11 @@ export default function HelpUs() {
       xsm:max-w-[520px]
       "
       >
-        <span
-          className={`${ZillaFont.className} text-xl leading-7 text-[#1B1B1BCC] p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]
-          
-          max-[245px]:text-base
-          max-[210px]:text-sm
-          max-[175px]:text-[10px]
-          max-[175px]:font-bold
-          `}
-        >
-          FAÇA UMA DOAÇÃO
-        </span>
+   
+        <Title align="center" className={`${ZillaFont.className} ${titleHelpUs}`}>
+          Faça uma Doação
+        </Title>
+        
 
         <p
           className={`${outfitFont.className} font-normal text-lg leading-6 text-[#1B1B1BCC] ml-2 mb-10

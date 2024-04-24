@@ -1,6 +1,7 @@
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
 import { HandHeart, HeartHandshake } from "lucide-react";
+import Button from "@/components/home.collection/CalltoactionButton/button";
 
 export const SendDonation = () => {
   const SendDonationSections = clsx(
@@ -49,11 +50,9 @@ export const SendDonation = () => {
           e no pagamento de contas da instituição
         </p>
 
-        <button
-          className={ButtonSendDonation}
-        >
-          Doar
-        </button>
+       <Button>
+        Doar
+       </Button>
       </article>
     </section>
 
