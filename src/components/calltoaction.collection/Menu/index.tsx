@@ -12,7 +12,7 @@ export const Menu = () => {
   const [openMenu, setopenMenu] = useState(false);
 
   return (
-    <div className="flex flex-col md:hidden z-[20]">
+    <div className="flex w-full items-end flex-col md:hidden z-[20]">
       <IoIosMenu
         title="Abrir menu"
         cursor={"pointer"}
@@ -32,7 +32,7 @@ export const Menu = () => {
       />
 
       {openMenu ? (
-        <div className="flex flex-col items-end relative">
+        <div className="flex w-full flex-col items-end relative">
           <IoClose
             title="Fechar menu"
             className={`
@@ -46,10 +46,12 @@ export const Menu = () => {
           />
 
           <nav
-            className={`flex absolute top-8 w-[70%]
+            className={`flex absolute top-8 w-[50%]
           
-          max-[180px]:w-[90%] 
-          xsm:w-80`}
+            max-sm:w-[60%]
+            max-xsm:w-[70%]
+          max-[240px]:w-full
+          `}
           >
             <ul className="flex flex-col w-full rounded-lg">
               <li>
