@@ -4,6 +4,7 @@ import { AboutSimios } from "@/components/simios.collection/aboutSimios";
 import { AboutProject } from "@/components/simios.collection/aboutProject";
 import { Organizers } from "@/components/simios.collection/organizers";
 import { Team } from "@/components/simios.collection/team";
+import Header from "@/components/headerMobile/header";
 import clsx from "clsx";
 
 export default function Simios() {
@@ -12,15 +13,17 @@ export default function Simios() {
     "max-[300px]:gap-8 max-[300px]:px-2"
   );
   return (
-    <div className={Container}>
+    <main>
+      <Header>Grupo Simios</Header>
+      <div className={Container}>
+        <AboutSimios />
 
-      <AboutSimios />
+        <AboutProject />
 
-      <AboutProject />
+        <Organizers />
 
-      <Organizers />
-
-      <Team />
-    </div>
+        <Team />
+      </div>
+    </main>
   );
 }
