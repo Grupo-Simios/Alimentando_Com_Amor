@@ -6,8 +6,6 @@ import { ZillaFont } from "@/assets/fonts";
 import { useState } from "react";
 import Link from "next/link";
 
-
-
 export const Menu = () => {
   const [openMenu, setopenMenu] = useState(false);
 
@@ -46,14 +44,18 @@ export const Menu = () => {
           />
 
           <nav
-            className={`flex absolute top-8 w-[50%]
+            className={`flex absolute top-12 w-[50%]
+            
           
             max-sm:w-[60%]
             max-xsm:w-[70%]
+            max-xsm:top-11
+            max-[200px]:top-7
           max-[240px]:w-full
+          max-[240px]:top-10
           `}
           >
-            <ul className="flex flex-col w-full rounded-lg">
+            <ul className="flex flex-col w-full rounded-lg transitionMenu">
               <li>
                 <Link
                   href={"/"}
