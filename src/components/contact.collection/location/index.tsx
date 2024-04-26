@@ -1,26 +1,13 @@
 "use client";
+
+require("dotenv").config();
+import React, { useEffect } from "react";
+import { Loader } from "@googlemaps/js-api-loader";
+import { Map } from "./map";
 import clsx from "clsx";
-import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
-import { outfitFont } from "@/assets/fonts";
 
 export const LocationMap = () => {
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: "AIzaSyC_jWH0YeM-5YOsUrCcKgT6Jy99t8B6Mho",
-  });
 
-  const locationClick = () => {
-
-    window.open(
-      "https://www.google.com.br/maps/place/R.+Santo+Antônio,+731+-+Cidade+Alta,+Natal+-+RN,+59010-270/@-5.7874438,-35.2116958,17z/data=!3m1!4b1!4m6!3m5!1s0x7b3000cab308407:0x80d9382d14f5050e!8m2!3d-5.7874438!4d-35.2091155!16s%2Fg%2F11c4yt94sl?entry=ttu",
-      "_blank"
-    );
-  };
-
-  const Position = {
-    lat: -5.78764,
-    lng: -35.20932,
-  };
 
   /* Functions clsx */
 
@@ -40,31 +27,7 @@ export const LocationMap = () => {
     <section className={contactLocalization}>
       <h2 className={subTittle}>LOCALIZAÇÃO</h2>
       <div className={divLocation}>
-        {isLoaded ? (
-          <GoogleMap
-            mapContainerStyle={{
-              width: "80%",
-              height: "350px",
-              borderRadius: "6px",
-            }}
-            center={Position}
-            zoom={20}
-          >
-            <MarkerF
-              onClick={locationClick}
-              position={Position}
-              options={{
-                label: {
-                  text: "Estamos aqui",
-                  fontFamily: `${outfitFont.className}`,
-                  color: "white",
-                },
-              }}
-            />
-          </GoogleMap>
-        ) : (
-          <></>
-        )}
+        <Map />
       </div>
     </section>
   );
