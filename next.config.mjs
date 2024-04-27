@@ -2,7 +2,7 @@
 const nextConfig = {
 
   images : {
-    domains : ["api.qrserver.com"]
+    domains : ["api.qrserver.com", "i.imgur.com"]
   }
 };
 

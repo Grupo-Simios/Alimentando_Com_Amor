@@ -36,7 +36,7 @@ export interface OngDetails {
 export const bankDetails: BankDetails = {
   ongName: "ASSOCIAÇÃO ALIMENTANDO COM AMOR",
   CNPJ: "51.753.476/0001-34",
-  key: "00020126360014br.gov.bcb.pix011451753476000134 5204000053039865802BR5910----------6005 NATAL 62070503***630476E4",
+  key: "00020126360014br.gov.bcb.pix0114517534760001345204000053039865802BR5910----------6005NATAL62070503***630476E4",
   qrCode: '',
   agency: "0035",
   operator: "003",
