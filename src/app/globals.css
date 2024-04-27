@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .Images {
   display: flex;
   width: 100%;
@@ -11,27 +10,36 @@
   align-items: center;
 }
 
-.Images div{
-  color: #FF9F1C;
-
+.transitionMenu {
+  animation: OpacityTransition 0.5s linear;
 }
 
-.Images div::after{
-    font-size: 30px;
+@keyframes OpacityTransition {
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
 
+.Images div {
+  color: #ff9f1c;
+}
+
+.Images div::after {
+  font-size: 30px;
 }
 
 @media (max-width: 480px) {
-
-    .Images div::after{
+  .Images div::after {
     display: none;
+  }
 }
-}
-
 
 .Images img {
-  width: 300px;
+  width: 350px;
   margin: auto auto;
   border-radius: 8px;
 }
@@ -41,26 +49,20 @@
     width: 50rem;
     margin: auto auto;
     border-radius: 0px;
-    
-
   }
 }
 
-
-.swiper{
-
+.swiper {
   position: relative;
 }
 
-.swiper-pagination{
-position: relative !important;
-margin-top: 1rem !important;
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 1rem !important;
 }
 
-.swiper-pagination-bullet{
-
+.swiper-pagination-bullet {
   position: relative;
   padding: 0.3rem;
-  background-color: #FF9F1C !important;
-  
+  background-color: #ff9f1c !important;
 }
