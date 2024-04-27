@@ -27,7 +27,8 @@ const config: Config = {
         "yellow-primary": "#FF9F1C",
         "yellow-primary-hover" : "#f97c07",
         "primary-black-text" : "#1B1B1B",
-        "branco-semi": "F9F6EE"
+        "branco-semi": "F9F6EE",
+        "light-yellow" :"#FFBF69"
         
         
       }
