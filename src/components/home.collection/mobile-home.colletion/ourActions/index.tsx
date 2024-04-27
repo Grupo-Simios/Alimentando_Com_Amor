@@ -76,7 +76,7 @@ export const Actions = () => {
         <Link href="/ajude-nos" className={ButtonHelpUs}>
           Ajude-nos
         </Link>
-        <Link href="/simios" className={ButtonKnowTheProject}>
+        <Link href="/grupo-simios" className={ButtonKnowTheProject}>
           Conheça o projeto
         </Link>
       </div>

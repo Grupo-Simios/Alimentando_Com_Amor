@@ -5,59 +5,60 @@ import { IoClose } from "react-icons/io5";
 import { ZillaFont } from "@/assets/fonts";
 import { useState } from "react";
 import Link from "next/link";
+import clsx from "clsx";
 
-
-
-export const Menu = () => {
+export function Menu() {
   const [openMenu, setopenMenu] = useState(false);
 
+  const ContainerMenu = clsx("flex w-full items-end flex-col md:hidden z-[20]");
+  const ContainerNavegation = clsx("flex w-full flex-col items-end relative");
+
+  const hideMenu = clsx("hidden");
+  const showMenu = clsx(
+    "block text-[30px]",
+    "max-[170px]:text-[16px] max-[240px]:text-[20px]"
+  );
+
+  const iconClose = clsx(
+    "block text-[30px]",
+    "max-[170px]:text-[16px] max-[240px]:text-[20px]"
+  );
+
+  const Menu = clsx(
+    "flex absolute top-12 w-[50%]",
+    "max-sm:w-[60%] max-xsm:w-[70%] max-xsm:top-11 max-[200px]:top-7 max-[240px]:w-full max-[240px]:top-10"
+  );
+
+  const listMenu = clsx("flex flex-col w-full rounded-lg transitionMenu");
+
+  const defaultStyleLink = clsx(
+    `${ZillaFont.className} font-semibold  py-4 w-full flex items-center justify-center`
+  );
+
   return (
-    <div className="flex w-full items-end flex-col md:hidden z-[20]">
+    <div className={ContainerMenu}>
       <IoIosMenu
         title="Abrir menu"
         cursor={"pointer"}
-        className={
-          openMenu
-            ? "hidden"
-            : `block 
-            text-[30px]
-
-          max-[170px]:text-[16px]
-          max-[240px]:text-[20px]
-          
-        
-        `
-        }
+        className={openMenu ? `${hideMenu}` : `${showMenu}`}
         onClick={() => setopenMenu(!openMenu)}
       />
 
       {openMenu ? (
-        <div className="flex w-full flex-col items-end relative">
+        <div className={ContainerNavegation}>
           <IoClose
             title="Fechar menu"
-            className={`
-            block 
-            text-[30px]
-            max-[170px]:text-[16px]
-            max-[240px]:text-[20px]
-            `}
+            className={iconClose}
             onClick={() => setopenMenu(!openMenu)}
             cursor={"pointer"}
           />
 
-          <nav
-            className={`flex absolute top-8 w-[50%]
-          
-            max-sm:w-[60%]
-            max-xsm:w-[70%]
-          max-[240px]:w-full
-          `}
-          >
-            <ul className="flex flex-col w-full rounded-lg">
+          <nav className={Menu}>
+            <ul className={listMenu}>
               <li>
                 <Link
                   href={"/"}
-                  className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#DEB841] items-center justify-center rounded-t-lg`}
+                  className={`${defaultStyleLink} bg-[#DEB841]  rounded-t-lg`}
                 >
                   Página inicial
                 </Link>
@@ -65,14 +66,14 @@ export const Menu = () => {
               <li>
                 <Link
                   href={"/nossa-historia"}
-                  className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#FFDDE1] items-center justify-center`}
+                  className={`${defaultStyleLink} bg-[#FFDDE1]`}
                 >
                   Nossa história
                 </Link>
               </li>
               <li>
                 <Link
-                  className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#DEB841] items-center justify-center`}
+                  className={`${defaultStyleLink} bg-[#DEB841]`}
                   href={"/ajude-nos"}
                 >
                   Ajude-nos
@@ -80,15 +81,15 @@ export const Menu = () => {
               </li>
               <li>
                 <Link
-                  className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#DEB841] items-center justify-center`}
-                  href={"contato"}
+                  className={`${defaultStyleLink} bg-[#DEB841]`}
+                  href={"/contato"}
                 >
                   Contato
                 </Link>
               </li>
               <li>
                 <Link
-                  className={`${ZillaFont.className} font-semibold  py-4 w-full flex bg-[#2C70A6] items-center justify-center rounded-b-lg`}
+                  className={`${defaultStyleLink} bg-[#2C70A6]  rounded-b-lg`}
                   href={"/grupo-simios"}
                 >
                   Grupo Simios
@@ -102,4 +103,4 @@ export const Menu = () => {
       )}
     </div>
   );
-};
+}
