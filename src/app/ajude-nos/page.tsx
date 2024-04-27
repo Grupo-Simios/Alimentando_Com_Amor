@@ -13,7 +13,7 @@ import { useState } from "react";
 
 export default function HelpUs() {
 
-  const [isCopy, setIscopy] = useState<any>();
+  const [isCopy, setIscopy] = useState<string>();
 
   const copyClipboard = (currentCLiped) => {
     navigator.clipboard.writeText(currentCLiped).then(() => console.log("Copiada"));
@@ -23,7 +23,7 @@ export default function HelpUs() {
       if(currentCLiped === bankDetails.CNPJ) setIscopy("cnpj")
       else if(currentCLiped === bankDetails.key) setIscopy("key")
       
-    })
+    },1000)
   };
 
   const titleHelpUs = clsx(
@@ -31,8 +31,21 @@ export default function HelpUs() {
     " max-[245px]:text-base max-[210px]:text-sm max-[175px]:text-[10px] max-[175px]:font-bold"
   );
 
+
+  // .....................Container qr Code.....................................
+  const BankDetailsContainer = clsx(
+    `w-[45%] ml-auto mr-auto`,
+    `xsm:w-[80%]`,
+    `sm:w-[44%]`,
+    `md:w-[80%]`,
+    `lg:w-[60%]`,
+    `xl:w-[50%]`,
+    `1xl:w-[45%]`
+
+  )
   const detailsContainer = clsx(
-    "flex flex-wrap justify-start gap-x-12 gap-y-6 mb-6"
+    `flex flex-wrap justify-start gap-x-12 gap-y-6 mb-6`
+   
   );
   const titleDetails = clsx(
     `font-bold text-md text-md text-[#363636]`,
@@ -43,10 +56,35 @@ export default function HelpUs() {
     outfitFont.className
   );
 
-  const qrCodeContainer = clsx(
-    'md:flex md:flex-row md:justify-center md:gap-6',
-    'flex flex-col items-center'
+
+  const mainContainer = clsx(
+    `w-[50%] ml-auto mr-auto`,
+    `md:mr-auto md:ml-auto md:w-[80%]`
+    
   )
+
+
+  const qrCodeContainer = clsx(
+
+    `xsm:gap-8`,
+    'flex flex-col items-center',
+    'md:flex md:flex-row md:justify-center md:gap-20 md:w-[80%] md:ml-auto md:mr-auto md:mb-10',
+    `lg:gap-6 mt-10`,
+    `xl:w-[60%]`,
+    `1xl:w-[50%] 1xl:gap-20`,
+    
+  )
+
+
+  const pixKeyParagraph = clsx(
+    `break-words whitespace-normal bg-light-yellow 
+    p-4 w-64 h-32 rounded-md text-sm font-semibold 
+     text-orange-800`,
+     outfitFont.className,
+     {"bg-zinc-200 text-zinc-400" : isCopy === 'key'}
+    
+  )
+
 
   return (
     <main className="flex flex-col gap-10 overflow-x-hidden bg-branco-semi">
@@ -101,23 +139,29 @@ export default function HelpUs() {
           seu banco para fazer um pix de qualquer valor.
         </Paragraph>
       </section>
+{/* 
+Aplicação de Resposividade:
+Minimal- screen - 480px
+Medium - screen - 640px
+larger - screen - 767px
+extra-larger - screen - 1024px 
+ */}
 
       {/* ............QRCODEAREA............ */}
-      <section className=" w-[50%] ml-auto mr-auto ">
+      <section className={mainContainer}>
         <article className={qrCodeContainer}>
+         
           <div className="flex flex-col items-center justify-center w-[40%] gap-8">
             <p
               title="Chave Pix da Associação"
-              className={`break-words whitespace-normal bg-light-yellow p-4 w-64 h-32 rounded-md text-sm font-semibold 
-            text-orange-800
-            ${outfitFont.className}`}
+              className={pixKeyParagraph}
             >
               {bankDetails.key.toUpperCase()}
             </p>
             <Button
-              backGround="copyPix"
-              isCliped={isCopy}
-              value={"icons"}
+             
+             backGround="copyPix"
+            isCliped={isCopy}
               onClick={() => copyClipboard(bankDetails.key.trim())}
             >
               {isCopy === 'key' ? <span>Chave Pix Copiada</span> : <span>Copiar Chave Pix</span>}
@@ -139,7 +183,7 @@ export default function HelpUs() {
       </section>
       {/* ............[END]QRCODEAREA............ */}
 
-      <section className=" w-[45%] ml-auto mr-auto">
+      <section className={BankDetailsContainer}>
         <article className={detailsContainer}>
           <div>
             <h2 className={subtitleDetails}>Destinatário:</h2>
