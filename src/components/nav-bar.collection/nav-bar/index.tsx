@@ -6,6 +6,8 @@ import { ZillaFont } from "@/assets/fonts"
 import { useState } from "react"
 
 export default function NavBarTop(){
+
+  const [click, setClick] = useState("")
   
   const navBar = clsx(
     'hidden bg-navbar-Yellow flex justify-around',
@@ -26,10 +28,11 @@ export default function NavBarTop(){
   )
 
   const navItems = clsx(
-    "w-[20%] text-center h-14 grid place-content-center hover:bg-yellow-primaty-hover text-primary-black-text text-base font-semibold hover:text-white rounded-b-[8px]",
+    "w-[20%] text-center h-14 grid place-content-center hover:bg-yellow-primary-hover text-primary-black-text text-base font-semibold hover:text-white rounded-b-[8px]",
     "last:bg-navbar-newblue last:text-white last:hover:bg-[#092934] last:rounded-b-[8px] ",
     " md:px-4",
     'xl:px-2 xl:w-[18%]'
+    
   );
 
   const menuItems = [
@@ -48,7 +51,7 @@ export default function NavBarTop(){
     <ul className={ulnavBar}>
   {
         menuItems.map((item,index)=>(
-          <Link key={index} className={navItems} href={item.link} >
+          <Link key={index} className={navItems} href={item.link} onClick={()=>setClick(item.link)} >
             <li>
               {item.title}
             </li>
