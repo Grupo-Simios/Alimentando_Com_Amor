@@ -90,7 +90,6 @@ export const PhonesContacts = () => {
         <h2 className={contactTitle}>EMAIL</h2>
         <ul className={contactListEmail}>
           <a ref={Email}>voluntario@alimentandocom{}amornatal.org</a>
-          <a ref={Email}>voluntario@alimentandocom{}amornatal.org</a>
         </ul>
       </section>
 
