@@ -1,3 +1,5 @@
+const imgDash = "https://i.imgur.com/"
+
 
 export const urlImgdata = [
   { id: "1", Image: "https://i.imgur.com/LUbQcEG.jpg", altImg : "a imagem mostra : a organizadora da ong sendo enttrevistada" },
@@ -8,7 +10,7 @@ export const urlImgdata = [
 ];
 
 export const simiosTeam = [
-  {id : 'selenium', image : "https://i.imgur.com/QZG6CsK.png", altImg: "Foto de selenium"},
+  {id : 'selenium', image : "QZG6CsK.png", altImg: "Foto de selenium"},
   {id : 'tester', image : "https://i.imgur.com/Nt01rad.png", altImg: "Foto do tester"},
   {id : 'erick', image : "https://i.imgur.com/4FpMoHw.png", altImg: "Foto do erick"},
   {id : 'ana', image : "https://i.imgur.com/OOAn04y.png", altImg: "Foto do ana"},
