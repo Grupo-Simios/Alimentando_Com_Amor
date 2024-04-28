@@ -66,3 +66,10 @@
   padding: 0.3rem;
   background-color: #ff9f1c !important;
 }
+
+
+.bannerHeroHome{
+
+  background-image: url("https://i.imgur.com/G8Q9i5g.png");
+  background-size: cover;
+}

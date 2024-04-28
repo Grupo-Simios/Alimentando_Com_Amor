@@ -14,9 +14,7 @@ import { urlImgdata } from "@/models/urlImgSwiper.model";
 import clsx from "clsx";
 import Paragraph from "../paragraph/paragraph";
 
-
 export const AboutAlimentandoComAmor = () =>{
-
 
   const homeContainer = clsx(
     "sectionSwiper flex bg-[#F9F6EE] flex-col items-center gap-10 leading-7 py-16 px-5",
@@ -41,16 +39,15 @@ export const AboutAlimentandoComAmor = () =>{
     "md:w-[45%] ml-auto mr-auto "
   
   )
-
   return(
     
     <>
        
        <section className={homeContainer}>
+      
         <h1 className={`${ZillaFont.className} ${heroTitlemobile}`}>
           Alimentando com amor
         </h1>
-
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -69,6 +66,7 @@ export const AboutAlimentandoComAmor = () =>{
         <h1 className={`${ZillaFont.className} ${heroTitleDesktop}`}>
           Alimentando com amor
         </h1>
+
 
         <article className={heroArticleContainer}>
 
@@ -94,3 +92,5 @@ export const AboutAlimentandoComAmor = () =>{
     </>
   )
 }
+
+
