@@ -1,15 +1,19 @@
-import reponsiveSizeDesktop from '@/components/home.collection/style/responsive/desktop/md.module.css'
 import Link from 'next/link'
 import clsx from 'clsx'
 import Button from '../CalltoactionButton/button';
+
 export const HomeDesktop = () =>{
+
+
+
 
   const heroContainer = clsx(
     'max-md:hidden'
   )
   const bannerHeroHome = clsx(
-    'md:h-[609px]',
-    'lg:bg-[url(https://i.imgur.com/G8Q9i5g.png)] lg:h-[609px]'
+    'md:h-[609px] w-screen',
+    'lg:h-[609px]',
+    `xl:bg-green-400 w-screen`
   )
   
 
@@ -25,7 +29,7 @@ export const HomeDesktop = () =>{
   )
   return (
     <section className={heroContainer}>
-      <section className={bannerHeroHome}>
+      <section className={`${bannerHeroHome} bannerHeroHome`}>
         <div className={divHomeComponents}>
           <header className={headerHomecomponents}>
             <h1 className="text-5xl font-[inter] ">

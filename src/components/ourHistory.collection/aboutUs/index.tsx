@@ -1,6 +1,7 @@
 "use client";
 import clsx from "clsx";
 import Paragraph from "@/components/home.collection/paragraph/paragraph";
+import ParagraphSection from "@/components/sectionParagraph/sectionParagraph";
 import { ZillaFont } from "@/assets/fonts";
 
 export function AboutUsOurHistory() {
@@ -9,21 +10,18 @@ export function AboutUsOurHistory() {
     `max-[200px]:mt-14 md:w-1/2`
   );
 
-  const SubTitleWhoWeAre = clsx(
-    `${ZillaFont.className} text-2xl pb-2 border-b-[2px] leading-7 border-[#FF9F1C] font-normal `,
-    "md:text-center",
-    `max-[200px]:text-base max-[210px]:text-lg`
-  );
+ 
 
   return (
     <section className={sectionAboutUs}>
-      <h2 className={SubTitleWhoWeAre}>Quem somos</h2>
-      <Paragraph>
-        Alimentando com amor é uma associação sem fins lucrativos com mais de 5
+      
+      <ParagraphSection title="Quem Somos">
+      Alimentando com amor é uma associação sem fins lucrativos com mais de 5
         anos de funcionamento. No começo, usávamos um carrinho de mão para
         distribuir marmitas à pessoas em situação de rua, sem nenhum tipo de
         apoio.
-      </Paragraph>
+      </ParagraphSection>
+
       <Paragraph>
         Conforme o projeto cresceu, passamos a fornecer um lugar para as pessoas
         tomarem banho e atenderem suas necessidades fisiológicas. Para isto,
