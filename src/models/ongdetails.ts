@@ -15,6 +15,7 @@ export interface ContactDetails {
   volunteerEmail: string;
   linkWhatsapp1: string;
   linkWhatsapp2: string;
+  formsLink: string;
 }
 
 export interface AddressDetails {
@@ -49,7 +50,8 @@ export const contactDetails: ContactDetails = {
   tel2: '(84)998169-0141',
   volunteerEmail: 'voluntario@alimentandocomamornatal.org',
   linkWhatsapp1: "https://wa.me/55849987136833",
-  linkWhatsapp2:"https://wa.me/55849981690141"
+  linkWhatsapp2:"https://wa.me/55849981690141",
+  formsLink: "https://docs.google.com/forms/d/e/1FAIpQLSdSu6aNCrawHnwHdQC-71CT14mu25qC5IHfuEUvSguJsB5SiA/viewform?pli=1"
 
 };
 
