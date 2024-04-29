@@ -68,6 +68,7 @@ export const PhonesContacts = () => {
             target="_blank"
             href="https://wa.me/558421318789"
             title="Contato Administração"
+            aria-label="Contato da Adiministração da Ong"
           >
             Administração: (84) 2131-8789
           </Link>
@@ -75,6 +76,7 @@ export const PhonesContacts = () => {
             target="_blank"
             href="https://wa.me/5584987136833"
             title="chamar no WhatsApp"
+            aria-label="Contato do Whatsapp da Ong"
           >
             Maria Aparecida Cida: {contactDetails.tel1}
           </Link>
@@ -82,6 +84,7 @@ export const PhonesContacts = () => {
             target="_blank"
             href="https://wa.me/987136833"
             title="chamar no WhatsApp"
+            aria-label="contato do Whastapp da Ong"
           >
             Ysla Mônica: {contactDetails.tel2}
           </Link>
