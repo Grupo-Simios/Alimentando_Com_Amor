@@ -13,7 +13,7 @@ export const HomeDesktop = () =>{
   const bannerHeroHome = clsx(
     'md:h-[609px] w-screen',
     'lg:h-[609px]',
-    `xl:bg-green-400 w-screen`
+    `w-screen`
   )
   
 

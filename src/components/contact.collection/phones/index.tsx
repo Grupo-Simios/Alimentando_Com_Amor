@@ -3,6 +3,7 @@ import { outfitFont } from "@/assets/fonts";
 import { useRef } from "react";
 import clsx from "clsx";
 import Link from "next/link";
+import { contactDetails } from "@/models/ongdetails";
 
 export const PhonesContacts = () => {
   const Email = useRef<any>();
@@ -13,7 +14,11 @@ export const PhonesContacts = () => {
       .then(() => alert("Copiado com sucesso"));
   };
 
-  const Container = clsx("flex flex-col gap-10", "md:w-1/2 md:pl-6 lg:ml-28");
+  const Container = clsx(
+  `flex flex-col gap-10`,
+  `md:w-[70%] md:gap-2`,
+  `xl:w-[50%]`  
+  );
 
   const containerItems = clsx(
     `${outfitFont.className} w-full px-4 flex flex-col mt-28  gap-5`,
@@ -71,14 +76,14 @@ export const PhonesContacts = () => {
             href="https://wa.me/5584987136833"
             title="chamar no WhatsApp"
           >
-            Maria Aparecida Cida: (84) 98713-6833
+            Maria Aparecida Cida: {contactDetails.tel1}
           </Link>
           <Link
             target="_blank"
             href="https://wa.me/987136833"
             title="chamar no WhatsApp"
           >
-            Ysla Mônica: (84) 98713-6833
+            Ysla Mônica: {contactDetails.tel2}
           </Link>
         </ul>
       </section>
@@ -89,7 +94,7 @@ export const PhonesContacts = () => {
         </button>
         <h2 className={contactTitle}>EMAIL</h2>
         <ul className={contactListEmail}>
-          <a ref={Email}>voluntario@alimentandocom{}amornatal.org</a>
+          <a ref={Email}>{contactDetails.volunteerEmail}</a>
         </ul>
       </section>
 
@@ -97,11 +102,14 @@ export const PhonesContacts = () => {
         <h2 className={contactTitle}>ENDEREÇO</h2>
 
         <ul className={listAdress}>
+          <li>ASSOCIAÇÂO ALIMENTANDO COM AMOR</li>
           <li>
             Rua Santo Antônio 731 <br /> Cidade Alta, Natal RN
           </li>
         </ul>
       </address>
+     
+
     </div>
   );
 };

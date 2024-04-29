@@ -1,16 +1,16 @@
 "use client";
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
-import Title from "@/components/titles/title";
 import Paragraph from "@/components/home.collection/paragraph/paragraph";
 import ParagraphSection from "@/components/sectionParagraph/sectionParagraph";
 import Header from "@/components/headerMobile/header";
 import Button from "@/components/home.collection/CalltoactionButton/button";
-import { bankDetails } from "@/models/ongdetails";
+import { bankDetails, contactDetails } from "@/models/ongdetails";
 import QRCode from "qrcode.react";
 import Image from "next/image";
 import { Copy } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function HelpUs() {
   const [isCopy, setIscopy] = useState<string>();
@@ -104,7 +104,9 @@ export default function HelpUs() {
         </Paragraph>
       </section>
 
-      <Button backGround="primary">Quero ser voluntário</Button>
+     <Link href={contactDetails.formsLink} target="_blanck">
+     <Button backGround="primary">Quero ser voluntário</Button>
+     </Link>
 
       <section
         className="flex self-center flex-col px-5 gap-2
