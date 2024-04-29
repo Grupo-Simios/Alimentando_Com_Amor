@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function LocationMap(){
   const contactLocalization = clsx(
-    "w-full px-4 flex flex-col  gap-10 mb-20",
+    "w-full px-4 flex flex-col  gap-10 mb-20 items-center",
     "md:w-1/2 md:px-0 md:justify-center",
     `xl:items-center`
   
