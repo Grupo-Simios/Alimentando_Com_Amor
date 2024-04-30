@@ -1,5 +1,8 @@
+"use client";
+
 import { ZillaFont } from "@/assets/fonts";
 import { Members } from "@/components/organizers.collectiion/organizers";
+import { simiosTeam } from "@/models/urlImgSwiper.model";
 import clsx from "clsx";
 
 export const Team = () => {
@@ -10,15 +13,7 @@ export const Team = () => {
     "max-[165px]:text-[10px] max-[190px]:text-xs max-[205px]:text-sm max-[225px]:text-base max-[225px]:text-center max-[270px]:text-lg max-[305px]:text-xl"
   );
 
-  const subContainer = clsx(
-    "flex self-center justify-center gap-8",
-    "max-[310px]:flex-wrap max-[250px]:gap-10"
-  );
-
-  const boxForOne = clsx(
-    "flex self-center gap-8 w-[100%] justify-center px-28 mb-10",
-    "max-[310px]:px-0 max-[335px]:px-[72px] max-[400px]:px-20 max-[450px]:px-24"
-  );
+  const FilterDevelepers = simiosTeam.filter((member) => !member.adm);
 
   return (
     <section className={Container}>
@@ -26,75 +21,33 @@ export const Team = () => {
         Conheça a equipe que
         <br /> desenvolveu este site
       </h2>
-      <div className={subContainer}>
-        <Members
-          github="https://github.com/DaviSC17"
-          linkedin="linkedin.com/in/davi-santanna-99246a259/"
-          image="https://github.com/DaviSC17.png"
-          mainFunction="UI/UX designer"
-          name="Gabriel Ferreira"
-          key={3}
-        />
-
-        <Members
-          github="https://github.com/DaviSC17"
-          linkedin="linkedin.com/in/davi-santanna-99246a259/"
-          image="https://github.com/DaviSC17.png"
-          mainFunction="Desenvolvedor Web"
-          name="Davi Santanna"
-          key={4}
-        />
-      </div>
-
-      <div className={subContainer}>
-        <Members
-          github="https://github.com/DaviSC17"
-          linkedin="linkedin.com/in/davi-santanna-99246a259/"
-          image="https://github.com/DaviSC17.png"
-          mainFunction="Desenvolvedor"
-          name="João Gabriel"
-          key={5}
-        />
-
-        <Members
-          github="https://github.com/DaviSC17"
-          linkedin="linkedin.com/in/davi-santanna-99246a259/"
-          image="https://github.com/DaviSC17.png"
-          mainFunction="Analista de Sistemas"
-          name="Ícaro Filipe"
-          key={6}
-        />
-      </div>
-
-      <div className={subContainer}>
-        <Members
-          github="https://github.com/DaviSC17"
-          linkedin="linkedin.com/in/davi-santanna-99246a259/"
-          image="https://github.com/DaviSC17.png"
-          mainFunction="Desenvolvedor Web"
-          name="Cláudio Silva"
-          key={7}
-        />
-
-        <Members
-          github="https://github.com/DaviSC17"
-          linkedin="linkedin.com/in/davi-santanna-99246a259/"
-          image="https://github.com/DaviSC17.png"
-          mainFunction="Luís Carlos Duarte"
-          name="Tester"
-          key={8}
-        />
-      </div>
-
-      <div className={boxForOne}>
-        <Members
-          github="https://github.com/DaviSC17"
-          linkedin="linkedin.com/in/davi-santanna-99246a259/"
-          image="https://github.com/DaviSC17.png"
-          mainFunction="Documenter"
-          name="Gabriel Santiago"
-          key={9}
-        />
+      <div className="flex flex-wrap items-center max-w-[500px] justify-center self-center gap-10">
+        {FilterDevelepers.map(
+          ({ image, github, key, mainFunction, name, linkedin }, index) =>
+            key === 1 ? (
+              <Members
+                github={github}
+                hasGithub={false}
+                hasLinkedin={true}
+                linkedin={linkedin}
+                image={image}
+                mainFunction={mainFunction}
+                name={name}
+                key={index}
+              />
+            ) : (
+              <Members
+                hasGithub={true}
+                hasLinkedin={true}
+                github={github}
+                linkedin={linkedin}
+                image={image}
+                mainFunction={mainFunction}
+                name={name}
+                key={index}
+              />
+            )
+        )}
       </div>
     </section>
   );
