@@ -2,6 +2,7 @@ const imgDash = "https://i.imgur.com/";
 
 
 export const simiosLogo = {image : "https://i.imgur.com/zBT3Rs1.png", alt : "Imagem do Simios"}
+export const DonateImg = {image : "https://i.imgur.com/1GXOxGv.jpg", alt : "Image da doação"}
 
 export const urlImgdata = [
   {
