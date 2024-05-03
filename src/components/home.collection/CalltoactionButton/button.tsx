@@ -18,7 +18,7 @@ export default function Button({
 }: IButtonProps) {
   const calltoactionButton = clsx(
     {
-      "bg-yellow-primary h-12 w-72 text-center grid place-content-center hover:bg-yellow-primary-hover text-white rounded-lg cursor-pointer ml-auto mr-auto font-bold":
+      "bg-yellow-primary h-12 w-72 text-center grid place-content-center hover:bg-yellow-primary-hover text-[#edfaee] rounded-lg cursor-pointer ml-auto mr-auto font-bold":
         backGround === "primary",
     },
     {
