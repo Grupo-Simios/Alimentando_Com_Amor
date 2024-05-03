@@ -14,7 +14,7 @@ export const FooterMobile = () => {
 )
 
 const footerMain = clsx(
-  'flex bg-[#1b1b1bCC] gap-6 w-full flex-col',
+  'flex bg-[#1b1b1bCC] gap-6 w-full flex-col pb-10',
   'lg:flex-row-reverse lg:py-10 lg:bg-navbar-Yellow'
   
   
@@ -149,7 +149,7 @@ const footerText = clsx(
                 Página Inicial </Link> </li>
 
                 <li>
-              <Link className={`${outfitFont.className} ${footerNavItems}`} href="/nossa-história">
+              <Link className={`${outfitFont.className} ${footerNavItems}`} href="/nossa-historia">
               Nossa história </Link> </li>
 
                 <li>
