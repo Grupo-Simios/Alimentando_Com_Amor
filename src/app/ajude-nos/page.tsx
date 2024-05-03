@@ -120,7 +120,7 @@ export default function HelpUs() {
         </Paragraph>
       </section>
 
-     <Link href={contactDetails.formsLink} target="_blanck">
+     <Link href={contactDetails.formsLink} target="_blanck" aria-label="Link para a Pagina de Voluntários">
      <Button backGround="primary">Quero ser voluntário</Button>
      </Link>
 

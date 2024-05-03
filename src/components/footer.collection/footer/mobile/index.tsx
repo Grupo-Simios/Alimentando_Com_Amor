@@ -54,14 +54,16 @@ const footerText = clsx(
           siga-nos nas redes
         </h2>
         <div className="flex h-fit gap-6 items-center justify-center">
-          <a href="https://facebook.com/cyda.lima.35" target="_blanck">
+          <a aria-label="link Para a Pagina do Facebook"
+          href="https://facebook.com/cyda.lima.35" target="_blanck">
             <FaFacebook
               color="#f5f5f5"
               className="text-5xl max-[195px]:text-2xl max-[285px]:text-4xl"
             />
           </a>
 
-          <a href={"https://www.instagram.com/alimentandocomamornatal/"} target="_blanck" >
+          <a aria-label="Link para a pagina do Instagram" 
+          href={"https://www.instagram.com/alimentandocomamornatal/"} target="_blanck" >
             <FaInstagram
               color="#f5f5f5"
               className="text-5xl max-[195px]:text-2xl max-[285px]:text-4xl"
@@ -105,7 +107,9 @@ const footerText = clsx(
               size={"20px"}
               className="max-[320px]:hidden"
             />
-           <a href={contactDetails.linkWhatsapp1}> Número de telefone: {contactDetails.tel1}</a>
+           <a
+           aria-label="Link para o Whastapp "
+           href={contactDetails.linkWhatsapp1}> Número de telefone: {contactDetails.tel1}</a>
           </p>
       
 
