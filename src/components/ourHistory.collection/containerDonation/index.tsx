@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { HandHeart } from "lucide-react";
 
+import { DonateImg } from "@/models/urlImgSwiper.model";
+
 export function ContainerDonationOurHistory() {
   const SendDonationSections = clsx(
     `flex pb-4 gap-10 flex-col mt-10 mx-4 w-fit border-[6px] border-[#FF9F1C] `,
@@ -36,7 +38,7 @@ export function ContainerDonationOurHistory() {
     `max-[250px]:text-xs w-[80%]`
   );
 
-  const FigureOfImageDonation = clsx(`flex w-fit`);
+  const FigureOfImageDonation = clsx(`md:hidden w-fit`);
 
   const ButtonSendDonation = clsx(
     `flex py-2 px-20 rounded-lg bg-[#FF9F1C] text-[#F5F5F5]  font-normal text-2xl leading-7 mx-1 `,
@@ -52,7 +54,8 @@ export function ContainerDonationOurHistory() {
     <div className="flex gap-12 flex-col justify-center items-center md:flex-col-reverse">
       <section className={SendDonationSections}>
         <figure className={FigureOfImageDonation}>
-          <Image src="" width={100} height={100} alt="Imagem de doação" />
+          <Image src={DonateImg.image} width={460} height={460} alt="Imagem de doação" />
+          
         </figure>
 
         <article className={MakeYourDonationArticle}>
