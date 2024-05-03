@@ -105,7 +105,6 @@ export const PhonesContacts = () => {
         <h2 className={contactTitle}>ENDEREÇO</h2>
 
         <ul className={listAdress}>
-          <li>ASSOCIAÇÂO ALIMENTANDO COM AMOR</li>
           <li>
             Rua Santo Antônio 731 <br /> Cidade Alta, Natal RN
           </li>
