@@ -41,11 +41,11 @@ export const HomeDesktop = () =>{
             </h2>
           </header>
 
-          <div className="flex gap-8 text-xl font-semibold text-[1B1B1B]  justify-center mt-[48px]">
+          <ul className="flex gap-8 text-xl font-semibold text-[1B1B1B]  justify-center mt-[48px]">
             <li className="list-none">ações voluntárias</li>
             <li>kits de higiene feminina</li>
             <li>brinquedos para as crianças</li>
-          </div>
+          </ul>
 
           <div className="font-bold text-xl flex gap-4 justify-center mt-[64px]">
             <Link href={"/ajude-nos"}>

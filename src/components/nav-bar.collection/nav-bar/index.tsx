@@ -44,20 +44,21 @@ export default function NavBarTop(){
 
   return(
     <>
-      <nav className={`${ZillaFont.className} ${navBar} `}>
-        <span className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</span>
-        <ul className={ulnavBar} role="navigation">
+      <section className={`${ZillaFont.className} ${navBar} `}>
+        <div className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</div>
+        <nav className={ulnavBar} role="navigation" aria-label="Navegaçao do menu">
+          
           {menuItems.map(({link, title},index)=>(
             
               <Link 
               aria-label={link}
                key={index} className={navItems} href={link}>
-               <li>{title}</li> 
+               <div>{title}</div> 
               </Link>
             
           ))}
-        </ul>
-      </nav>
+        </nav>
+      </section>
     </>
   )
 }
