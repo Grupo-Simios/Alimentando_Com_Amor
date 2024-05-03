@@ -1,5 +1,6 @@
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
+import ParagraphSection from "@/components/sectionParagraph/sectionParagraph";
 
 export const AboutProject = () => {
   const subTitleAboutProject = clsx(
@@ -16,10 +17,8 @@ export const AboutProject = () => {
     <section className="flex flex-col w-full gap-5">
       <h2 className={subTitleAboutProject}>Projeto Ongs na Web</h2>
 
-      <p
-        className={paragraphAboutProject}
-      >
-        <strong>
+<ParagraphSection>
+<strong>
           O projeto consiste na criação e desenvolvimento de plataformas
           digitais para ONGs necessitadas.
         </strong>
@@ -28,7 +27,8 @@ export const AboutProject = () => {
         com a intenção de trazer visibilidade e facilitar o contato com o
         público, e o engajamento de pessoas interessadas em doar ou se
         voluntariar.
-      </p>
+</ParagraphSection>
+
     </section>
   );
 };
