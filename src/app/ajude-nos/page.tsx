@@ -37,7 +37,7 @@ export default function HelpUs() {
 
   // .....................Container qr Code.....................................
   const BankDetailsContainer = clsx(
-    `w-[45%] ml-auto mr-auto`,
+    `w-[80%] ml-auto mr-auto`,
     `xsm:w-[80%]`,
     `sm:w-[44%]`,
     `md:w-[80%]`,
@@ -197,9 +197,9 @@ export default function HelpUs() {
           </div>
         </article>
         <article className=" mb-8">
-          <div className="w-[50%]">
+          <div className="w-[70%]">
             <h2 className={subtitleDetails}>Dados Bancários:</h2>
-            <ul className="flex justify-between  w-full">
+            <ul className="flex justify-between w-full ">
               <li className="flex flex-col">
                 <span className={titleDetails}>Agencia:</span>{" "}
                 <span className={titleDetails}>{bankDetails.agency}</span>
