@@ -15,7 +15,7 @@ export default function Simios() {
     "max-[300px]:gap-8 max-[300px]:px-2 md:w-[60%] md:ml-auto md:mr-auto"    
   );
 
-  const headerContainer = clsx(` w-full h-52 text-center flex flex-col justify-center gap-2`,
+  const headerContainer = clsx(` bg-red-400 w-full h-52 text-center flex flex-col justify-center gap-2`,
 "md:flex pt-10"
 
   )
@@ -45,7 +45,7 @@ outfitFont.className
 
     <main className="bg-[#F9F6EE]">
 
-      <Header className="hidden"><span className="hidden">Grupo Simios</span></Header>
+      <Header><span className="hidden">Grupo Simios</span></Header>
       <section className={headerContainer}>
         <h2 className={subtitle}>Este site foi feito inteiramente de graça pelo</h2>
       <h1 className={title}>GRUPO SÍMIOS</h1>
