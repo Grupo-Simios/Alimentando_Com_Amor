@@ -63,6 +63,7 @@ export default function HelpUs() {
   );
 
   const qrCodeContainer = clsx(
+    "gap-12",
     `xsm:gap-8`,
     "flex flex-col items-center",
     "md:flex md:flex-row md:justify-center md:gap-20 md:w-[80%] md:ml-auto md:mr-auto md:mb-10",
