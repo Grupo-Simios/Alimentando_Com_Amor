@@ -7,7 +7,7 @@ import Header from "@/components/headerMobile/header";
 export default function Contact(){
 
   const contactContainer = clsx(
-    "flex items-center flex-col gap-20 max-[150px]:overflow-x-hidden",
+    "flex items-center flex-col gap-20 overflow-x-hidden ",
     " md:gap-10 md:mb-20",
     `xl:flex xl:flex-row xl-justify-center xl:items-center
       xl:w-[70%] xl:ml-auto xl:mr-auto `,
