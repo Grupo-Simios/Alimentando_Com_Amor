@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import { AboutSimios } from "@/components/simios.collection/aboutSimios";
 import { AboutProject } from "@/components/simios.collection/aboutProject";
 import { Organizers } from "@/components/simios.collection/organizers";
@@ -30,18 +29,6 @@ outfitFont.className
 )
   return (
 <>
-    <Head>
-  <title>Sobre o Grupo SÍMIOS - Desenvolvimento Profissional e Projetos Voluntários</title>
-  <meta name="description" content="Conheça o Grupo SÍMIOS, um coletivo dedicado ao desenvolvimento profissional e comprometido em aprimorar habilidades por meio de projetos voluntários abrangentes, com foco em temáticas sociais, ambientais e outros. Saiba mais sobre o Projeto Ongs na Web e a equipe de desenvolvimento por trás deste site." />
-  <meta name="keywords" content="Grupo SÍMIOS, desenvolvimento profissional, projetos voluntários, Ongs na Web, reformulação de sites, desenvolvimento de plataformas digitais, visibilidade, contato com o público, doações, voluntariado" />
-  <meta property="og:title" content="Sobre o Grupo SÍMIOS - Desenvolvimento Profissional e Projetos Voluntários" />
-  <meta property="og:description" content="Conheça o Grupo SÍMIOS, um coletivo dedicado ao desenvolvimento profissional e comprometido em aprimorar habilidades por meio de projetos voluntários abrangentes, com foco em temáticas sociais, ambientais e outros. Saiba mais sobre o Projeto Ongs na Web e a equipe de desenvolvimento por trás deste site." />
-  <meta property="og:image" content="https://i.imgur.com/HYDqNfe.png" />
-  <meta property="og:url" content="url_da_pagina" />
-  <meta name="twitter:title" content="Sobre o Grupo SÍMIOS - Desenvolvimento Profissional e Projetos Voluntários" />
-  <meta name="twitter:description" content="Conheça o Grupo SÍMIOS, um coletivo dedicado ao desenvolvimento profissional e comprometido em aprimorar habilidades por meio de projetos voluntários abrangentes, com foco em temáticas sociais, ambientais e outros. Saiba mais sobre o Projeto Ongs na Web e a equipe de desenvolvimento por trás deste site." />
-  <meta name="twitter:image" content="https://i.imgur.com/HYDqNfe.png" />
-</Head>
 
     <main className="bg-[#F9F6EE]">
 
