@@ -48,7 +48,7 @@ export const simiosTeam = [
     image: "https://i.imgur.com/6DBmqZt.png",
     name: "Davi Santanna",
     github: "https://github.com/DaviSC17",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/davisantanna/",
     mainFunction: "Desenvolvedor web",
     adm: false,
   },
