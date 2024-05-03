@@ -58,7 +58,7 @@ export const AboutAlimentandoComAmor = () =>{
         >
           {urlImgdata.map((item) => (
             <SwiperSlide key={item.id}>
-              <img src={item.Image} alt={item.altImg} />
+              <img src={item.Image} width={824} height={465} alt={item.altImg} />
             </SwiperSlide>
           ))}
         </Swiper>

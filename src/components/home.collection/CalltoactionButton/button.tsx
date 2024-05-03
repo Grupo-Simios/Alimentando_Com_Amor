@@ -18,19 +18,19 @@ export default function Button({
 }: IButtonProps) {
   const calltoactionButton = clsx(
     {
-      "bg-yellow-primary h-12 w-72 text-center grid place-content-center hover:bg-yellow-primary-hover text-white rounded-lg cursor-pointer ml-auto mr-auto font-bold":
+      "bg-[#f97c07] h-12 w-72 text-center grid place-content-center hover:bg-[#f97c07]-hover text-[#edfaee] rounded-lg cursor-pointer ml-auto mr-auto font-bold":
         backGround === "primary",
     },
     {
-      "bg-trasparent h-12 w-72 text-center grid place-content-center border-4 border-yellow-primary hover:border-yellow-primary-hover text-black rounded-lg cursor-pointer":
+      "bg-trasparent h-12 w-72 text-center grid place-content-center border-4 border-[#f97c07] hover:border-[#f97c07]-hover text-black rounded-lg cursor-pointer":
         backGround === "second",
     },
     {
-      "bg-yellow-primary h-12 w-64 text-center grid place-content-center hover:bg-yellow-primary-hover text-white rounded-lg cursor-pointer font-bold":
+      "bg-[#f97c07] h-12 w-64 text-center grid place-content-center hover:bg-[#f97c07]-hover text-[#edfaee] rounded-lg cursor-pointer font-bold":
         backGround === "copyPix",
     },
     {
-      "bg-green-500 h-12 w-64 text-center grid place-content-center hover:bg-green-600 text-white rounded-lg cursor-pointer font-bold":
+      "bg-green-500 h-12 w-64 text-center grid place-content-center hover:bg-green-600 text-[#edfaee] rounded-lg cursor-pointer font-bold":
        isCliped === "key",
     },
   

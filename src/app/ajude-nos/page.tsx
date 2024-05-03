@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import { ZillaFont, outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
 import Paragraph from "@/components/home.collection/paragraph/paragraph";
@@ -85,18 +84,6 @@ export default function HelpUs() {
 
   return (
     <>
-    <Head>
-  <title>Ajude-nos - Associação Alimentando com Amor</title>
-  <meta name="description" content="Saiba como você pode ajudar a Associação Alimentando com Amor tornando-se voluntário ou fazendo uma doação. Sua contribuição é fundamental para apoiar nosso trabalho de base em prol das pessoas em situação de rua e da comunidade Passos da Pátria." />
-  <meta name="keywords" content="Associação Alimentando com Amor, ajude-nos, seja voluntário, faça uma doação, apoio a pessoas em situação de rua, doações, voluntariado, ajuda humanitária" />
-  <meta property="og:title" content="Ajude-nos - Associação Alimentando com Amor" />
-  <meta property="og:description" content="Saiba como você pode ajudar a Associação Alimentando com Amor tornando-se voluntário ou fazendo uma doação. Sua contribuição é fundamental para apoiar nosso trabalho de base em prol das pessoas em situação de rua e da comunidade Passos da Pátria." />
-  <meta property="og:image" content="url_da_imagem" />
-  <meta property="og:url" content="url_da_pagina" />
-  <meta name="twitter:title" content="Ajude-nos - Associação Alimentando com Amor" />
-  <meta name="twitter:description" content="Saiba como você pode ajudar a Associação Alimentando com Amor tornando-se voluntário ou fazendo uma doação. Sua contribuição é fundamental para apoiar nosso trabalho de base em prol das pessoas em situação de rua e da comunidade Passos da Pátria." />
-  <meta name="twitter:image" content="url_da_imagem" />
-</Head>
 
     <main className="flex flex-col gap-10 overflow-x-hidden bg-branco-semi">
       <Header>Ajude-nos</Header>
