@@ -10,7 +10,7 @@ import clsx from "clsx";
 export function Menu() {
   const [openMenu, setopenMenu] = useState(false);
 
-  const ContainerMenu = clsx("flex w-full items-end flex-col md:hidden z-[20]");
+  const ContainerMenu = clsx("flex w-full items-end flex-col md:hidden z-[20] ");
   const ContainerNavegation = clsx("flex w-full flex-col items-end relative");
 
   const hideMenu = clsx("hidden");
@@ -25,7 +25,7 @@ export function Menu() {
   );
 
   const Menu = clsx(
-    "flex absolute top-12 w-[50%]",
+    "flex absolute top-12 w-[50%] mr-6",
     "max-sm:w-[60%] max-xsm:w-[70%] max-xsm:top-11 max-[200px]:top-7 max-[240px]:w-full max-[240px]:top-10"
   );
 
