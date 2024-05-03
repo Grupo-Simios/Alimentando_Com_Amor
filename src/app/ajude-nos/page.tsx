@@ -92,7 +92,7 @@ export default function HelpUs() {
       
       "
       >
-        <ParagraphSection title="Seja Voluntário">
+        <ParagraphSection title="Seja Voluntário" border={true}>
           Estamos sempre precisando de mais pessoas dispostas a ajudar com esse
           inestimável trabalho de base, sem a qual muitos cidadãos estariam
           completamente desamparados.
@@ -117,7 +117,7 @@ export default function HelpUs() {
       
       "
       >
-        <ParagraphSection title="Faça uma Doação">
+        <ParagraphSection title="Faça uma Doação" border={true}>
           Escaneie o código QR ou copie o código abaixo e cole no aplicativo do
           seu banco para fazer um pix de qualquer valor.
         </ParagraphSection>

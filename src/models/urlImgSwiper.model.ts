@@ -1,5 +1,8 @@
 const imgDash = "https://i.imgur.com/";
 
+
+export const simiosLogo = {image : "https://i.imgur.com/zBT3Rs1.png", alt : "Imagem do Simios"}
+
 export const urlImgdata = [
   {
     id: "1",
@@ -30,9 +33,25 @@ export const urlImgdata = [
 ];
 
 export const simiosTeam = [
+
+  
   {
-    id: "tester",
-    key: 1,
+    image: "https://i.imgur.com/QZG6CsK.png",
+    name: "Gabriel Ferreira",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/gabriel-ferreira-b71119242/",
+    mainFunction: "UX/UI designer",
+    adm: false,
+  },
+  {
+    image: "https://i.imgur.com/6DBmqZt.png",
+    name: "Davi Santanna",
+    github: "https://github.com/DaviSC17",
+    linkedin: "",
+    mainFunction: "Desenvolvedor web",
+    adm: false,
+  },
+  {
     image: "https://i.imgur.com/Nt01rad.png",
     name: "Luis Carlos Duarte",
     github: "",
@@ -43,8 +62,6 @@ export const simiosTeam = [
   },
 
   {
-    id: "erick",
-    key: 2,
     image: "https://i.imgur.com/4FpMoHw.png",
     name: "Erick Rosa",
     github: "https://github.com/Erickhrs",
@@ -55,11 +72,9 @@ export const simiosTeam = [
   },
 
   {
-    id: "ana",
-    key: 3,
     image: "https://i.imgur.com/OOAn04y.png",
     name: "Ana Martins",
-    github: "",
+    github: '',
     linkedin:
       "https://www.linkedin.com/in/ana-martins-129657261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     mainFunction: "",
@@ -67,41 +82,24 @@ export const simiosTeam = [
   },
 
   {
-    id: "Dinho",
-    key: 4,
     image: "https://i.imgur.com/1zSU8Dd.png",
     name: "Cláudio Silva",
     github: "https://github.com/dinhoSilwa",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/cl%C3%A1udio-silva-46a3602a6/",
     mainFunction: "Desenvolvedor web",
     adm: false,
   },
 
   {
-    id: "icaro",
-    key: 5,
     image: "https://i.imgur.com/RWeDj0C.png",
     name: "Icaro Filipe",
     github: "https://github.com/IcaroFilipeD2",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/icaro-filipe-d2/",
     mainFunction: "Analista de Sistemas",
     adm: false,
   },
 
   {
-    id: "davi",
-    key: 6,
-    image: "https://i.imgur.com/6DBmqZt.png",
-    name: "Davi Santanna",
-    github: "https://github.com/DaviSC17",
-    linkedin: "",
-    mainFunction: "Desenvolvedor web",
-    adm: false,
-  },
-
-  {
-    id: "documenter",
-    key: 7,
     image: "https://i.imgur.com/4LjUIUC.png",
     name: "Gabriel Santiago",
     github: "https://github.com/gabriel-sant123",
@@ -112,8 +110,6 @@ export const simiosTeam = [
   },
 
   {
-    id: "back",
-    key: 8,
     image: "https://i.imgur.com/gSFj3OM.png",
     name: "João Gabriel",
     github: "https://github.com/JoaoGabsSR",
@@ -122,14 +118,4 @@ export const simiosTeam = [
     adm: false,
   },
 
-  {
-    id: "designer",
-    key: 9,
-    image: "https://i.imgur.com/Nt01rad.png",
-    name: "Gabriel Ferreira",
-    github: "",
-    linkedin: "",
-    mainFunction: "UX/UI designer",
-    adm: false,
-  },
 ];

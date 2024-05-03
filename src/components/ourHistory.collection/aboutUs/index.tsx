@@ -15,7 +15,7 @@ export function AboutUsOurHistory() {
   return (
     <section className={sectionAboutUs}>
       
-      <ParagraphSection title="Quem Somos">
+      <ParagraphSection title="Quem Somos" border={true}>
       Alimentando com amor é uma associação sem fins lucrativos com mais de 5
         anos de funcionamento. No começo, usávamos um carrinho de mão para
         distribuir marmitas à pessoas em situação de rua, sem nenhum tipo de

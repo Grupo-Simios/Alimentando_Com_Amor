@@ -1,7 +1,8 @@
 "use client";
 import { ZillaFont } from "@/assets/fonts";
-import { Members } from "@/components/organizers.collectiion/organizers";
+import {Members} from "@/components/organizers.collectiion/organizers";
 import { simiosTeam } from "@/models/urlImgSwiper.model";
+import Title from "@/components/titles/title";
 import clsx from "clsx";
 
 export const Organizers = () => {
@@ -9,18 +10,19 @@ export const Organizers = () => {
 
   const subTitleOrganizers = clsx(
     `${ZillaFont.className} text-2xl leading-7 font-bold z  pb-1 border-b-[2px] border-[#FF9F1C] w-full`,
-    " max-[165px]:text-[10px] max-[190px]:text-xs max-[205px]:text-sm max-[225px]:text-base max-[225px]:text-center max-[270px]:text-lg max-[305px]:text-xl"
+    " max-[165px]:text-[10px] max-[190px]:text-xs max-[205px]:text-sm max-[225px]:text-base max-[225px]:text-center max-[270px]:text-lg max-[305px]:text-xl",
+    "md:font-normal"
   );
 
   const subContainer = clsx("flex gap-10 self-center justify-center flex-wrap");
-
+  
   const FilterAdm = simiosTeam.filter((member) => member.adm);
 
   return (
     <section className={ContainerOrganizers}>
-      <h2 className={subTitleOrganizers}>Organizadores</h2>
+      <Title className={subTitleOrganizers}>Organizadores</Title>
       <div className={subContainer}>
-        {FilterAdm.map(({ github, image, key, linkedin, name }, index) =>
+        {/* {FilterAdm.map(({ github, image, key, linkedin, name }, index) =>
           key === 3 ? (
             <Members
               hasGithub={false}
@@ -42,6 +44,19 @@ export const Organizers = () => {
               mainFunction=""
               name={name}
               key={index}
+            />
+          )
+        )} */}
+
+        {FilterAdm.map(
+          ({ name, github, image, linkedin, mainFunction }, index) => (
+            <Members
+              key={index}
+              name={name}
+              github={github}
+              linkedin={linkedin}
+              image={image}
+              mainFunction={mainFunction}
             />
           )
         )}
