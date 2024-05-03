@@ -46,11 +46,13 @@ export default function NavBarTop(){
     <>
       <nav className={`${ZillaFont.className} ${navBar} `}>
         <span className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</span>
-        <ul className={ulnavBar}>
-          {menuItems.map((item,index)=>(
+        <ul className={ulnavBar} role="navigation">
+          {menuItems.map(({link, title},index)=>(
             
-              <Link  key={index} className={navItems} href={item.link} onClick={()=>setClick(item.link)} aria-label={item.title}>
-               <li>{item.title}</li> 
+              <Link 
+              aria-label={link}
+               key={index} className={navItems} href={link}>
+               <li>{title}</li> 
               </Link>
             
           ))}
