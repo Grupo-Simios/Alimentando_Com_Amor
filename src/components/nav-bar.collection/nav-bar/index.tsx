@@ -1,5 +1,4 @@
-
- "use client" 
+"use client"
 import Link from "next/link"
 import clsx from "clsx"
 import { ZillaFont } from "@/assets/fonts"
@@ -44,23 +43,19 @@ export default function NavBarTop(){
   ];
 
   return(
-<>
-
-    <nav className={`${ZillaFont.className} ${navBar} `}>
-      <span className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</span>
-    <ul className={ulnavBar}>
-  {
-        menuItems.map((item,index)=>(
-          <Link key={index} className={navItems} href={item.link} onClick={()=>setClick(item.link)} >
-            <li>
-              {item.title}
-            </li>
-          </Link>
-        ))
-      }
-    </ul>
-  </nav>
-</>
+    <>
+      <nav className={`${ZillaFont.className} ${navBar} `}>
+        <span className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</span>
+        <ul className={ulnavBar}>
+          {menuItems.map((item,index)=>(
+            
+              <Link  key={index} className={navItems} href={item.link} onClick={()=>setClick(item.link)} aria-label={item.title}>
+               <li>{item.title}</li> 
+              </Link>
+            
+          ))}
+        </ul>
+      </nav>
+    </>
   )
 }
-      

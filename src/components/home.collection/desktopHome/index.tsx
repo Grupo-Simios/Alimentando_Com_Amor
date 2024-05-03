@@ -35,10 +35,10 @@ export const HomeDesktop = () =>{
             <h1 className="text-5xl font-[inter] ">
               ALIMENTANDO <span className="text-yellow-primary">COM AMOR</span>
             </h1>
-            <h3 className="text-2xl">
+            <h2 className="text-2xl">
               Distribuição de cestas básicas e marmitas para pessoas vulneráveis
               ou em situação de rua
-            </h3>
+            </h2>
           </header>
 
           <div className="flex gap-8 text-xl font-semibold text-[1B1B1B]  justify-center mt-[48px]">
