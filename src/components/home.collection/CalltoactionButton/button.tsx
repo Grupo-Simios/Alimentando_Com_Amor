@@ -26,11 +26,11 @@ export default function Button({
         backGround === "second",
     },
     {
-      "bg-yellow-primary h-12 w-64 text-center grid place-content-center hover:bg-yellow-primary-hover text-white rounded-lg cursor-pointer font-bold":
+      "bg-yellow-primary h-12 w-64 text-center grid place-content-center hover:bg-yellow-primary-hover text-[#edfaee] rounded-lg cursor-pointer font-bold":
         backGround === "copyPix",
     },
     {
-      "bg-green-500 h-12 w-64 text-center grid place-content-center hover:bg-green-600 text-white rounded-lg cursor-pointer font-bold":
+      "bg-green-500 h-12 w-64 text-center grid place-content-center hover:bg-green-600 text-[#edfaee] rounded-lg cursor-pointer font-bold":
        isCliped === "key",
     },
   

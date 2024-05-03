@@ -27,8 +27,8 @@ export default function NavBarTop(){
   )
 
   const navItems = clsx(
-    "w-[20%] text-center h-14 grid place-content-center hover:bg-yellow-primary-hover text-primary-black-text text-base font-semibold hover:text-white rounded-b-[8px]",
-    "last:bg-navbar-newblue last:text-white last:hover:bg-[#092934] last:rounded-b-[8px] ",
+    "w-[20%] text-center h-14 grid place-content-center hover:bg-yellow-primary-hover text-primary-black-text text-base font-semibold hover:text-[#edfaee] rounded-b-[8px]",
+    "last:bg-navbar-newblue last:text-[#edfaee] last:hover:bg-[#092934] last:rounded-b-[8px] ",
     " md:px-4",
     'xl:px-2 xl:w-[18%]'
     

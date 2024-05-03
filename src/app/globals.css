@@ -59,12 +59,17 @@
 .swiper-pagination {
   position: relative !important;
   margin-top: 1rem !important;
+  
 }
 
 .swiper-pagination-bullet {
+ 
   position: relative;
-  padding: 0.3rem;
+  padding: 0.4rem;
   background-color: #ff9f1c !important;
+  border: 2px solid red;
+  
+  
 }
 
 
