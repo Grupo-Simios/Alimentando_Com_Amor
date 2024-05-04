@@ -10,7 +10,9 @@ import clsx from "clsx";
 export function Menu() {
   const [openMenu, setopenMenu] = useState(false);
 
-  const ContainerMenu = clsx("flex w-full items-end flex-col md:hidden z-[20]");
+  const ContainerMenu = clsx(
+    "flex w-full items-end flex-col pr-1  md:hidden z-[20]"
+  );
   const ContainerNavegation = clsx("flex w-full flex-col items-end relative");
 
   const hideMenu = clsx("hidden");
@@ -57,7 +59,7 @@ export function Menu() {
             <ul className={listMenu}>
               <li>
                 <Link
-                aria-label="Link para a pagina inicial"
+                  aria-label="Link para a pagina inicial"
                   href={"/"}
                   className={`${defaultStyleLink} bg-[#DEB841]  rounded-t-lg`}
                 >
@@ -66,7 +68,7 @@ export function Menu() {
               </li>
               <li>
                 <Link
-                aria-label="Link Para a Pagina de Nossa historia"
+                  aria-label="Link Para a Pagina de Nossa historia"
                   href={"/nossa-historia"}
                   className={`${defaultStyleLink} bg-[#FFDDE1]`}
                 >
@@ -75,7 +77,7 @@ export function Menu() {
               </li>
               <li>
                 <Link
-                aria-label="link Para a pagina Ajude-nos"
+                  aria-label="link Para a pagina Ajude-nos"
                   className={`${defaultStyleLink} bg-[#DEB841]`}
                   href={"/ajude-nos"}
                 >
@@ -84,7 +86,7 @@ export function Menu() {
               </li>
               <li>
                 <Link
-                aria-label="Link para a Pagina De contatos"
+                  aria-label="Link para a Pagina De contatos"
                   className={`${defaultStyleLink} bg-[#DEB841]`}
                   href={"/contato"}
                 >
@@ -93,7 +95,7 @@ export function Menu() {
               </li>
               <li>
                 <Link
-                aria-label="Link para a pagina do Grupo Simios"
+                  aria-label="Link para a pagina do Grupo Simios"
                   className={`${defaultStyleLink} bg-[#2C70A6]  rounded-b-lg`}
                   href={"/grupo-simios"}
                 >
