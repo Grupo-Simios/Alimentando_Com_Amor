@@ -4,7 +4,7 @@ import {Members} from "@/components/organizers.collectiion/organizers";
 import { simiosTeam } from "@/models/urlImgSwiper.model";
 import Title from "@/components/titles/title";
 import clsx from "clsx";
-
+import { useEffect } from "react";
 export const Organizers = () => {
   const ContainerOrganizers = clsx("flex flex-col w-full gap-10");
 
@@ -16,7 +16,9 @@ export const Organizers = () => {
 
   const subContainer = clsx("flex gap-10 self-center justify-center flex-wrap");
   
-  const FilterAdm = simiosTeam.filter((member) => member.adm);
+  const FilterAdm = simiosTeam.filter((member) => member.adm === true);
+
+
 
   return (
     <section className={ContainerOrganizers}>
@@ -50,6 +52,7 @@ export const Organizers = () => {
 
         {FilterAdm.map(
           ({ name, github, image, linkedin, mainFunction }, index) => (
+
             <Members
               key={index}
               name={name}
@@ -58,7 +61,9 @@ export const Organizers = () => {
               image={image}
               mainFunction={mainFunction}
             />
+            
           )
+          
         )}
       </div>
     </section>
