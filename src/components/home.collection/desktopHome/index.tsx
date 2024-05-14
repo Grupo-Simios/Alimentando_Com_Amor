@@ -41,15 +41,9 @@ export const HomeDesktop = () =>{
             </h2>
           </header>
 
-          <ul className="flex gap-8 text-xl font-semibold text-[1B1B1B]  justify-center mt-[48px]">
-            <li className="list-none">ações voluntárias</li>
-            <li>kits de higiene feminina</li>
-            <li>brinquedos para as crianças</li>
-          </ul>
-
           <div className="font-bold text-xl flex gap-4 justify-center mt-[64px]">
             <Link href={"/ajude-nos"}>
-              <Button backGround='primary'>ajude-nos</Button>
+              <Button backGround='primary'>Ajude-nos</Button>
             </Link>
             <Link href={"/nossa-historia"}>
               <Button backGround="second">Conheça o projeto</Button>
