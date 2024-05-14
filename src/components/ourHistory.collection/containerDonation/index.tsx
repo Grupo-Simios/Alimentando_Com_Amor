@@ -95,7 +95,7 @@ export function ContainerDonationOurHistory() {
       <section className={WhoWeHelpsSection}>
         <p className={TextWhoWeHelps}>
           APOIAMOS PESSOAS EM SITUAÇÃO DE RUA, MORADORES DA COMUNIDADE PASSOS DA
-          PATRIA SEM DISCRIMIDAR IDADE, SEXO, RAÇA, COR, CRÊDO, OU ORIENTAÇÃO
+          PATRIA SEM DISCRIMIDAR IDADE, SEXO, RAÇA, COR, CREDO, OU ORIENTAÇÃO
           SEXUAL
         </p>
       </section>
