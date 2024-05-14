@@ -16,7 +16,7 @@ export default function NavBarTop(){
   )
   const OngName = clsx(
     'flex items-center justify-center font-semibold hidden',
-    'hidden xl:flex px-8 w-[40%]',
+    'hidden xl:flex px-8 w-fit h-fit self-center',
     'xl:w-auto'
   )
 
@@ -37,15 +37,15 @@ export default function NavBarTop(){
   const menuItems = [
     { title: "Pagina inicial", link: "/", isSelected: false },
     { title: "Nossa História", link: "/nossa-historia", isSelected: false },
-    { title: "ajude-nos", link: "/ajude-nos", isSelected: false },
+    { title: "Ajude-nos", link: "/ajude-nos", isSelected: false },
     { title: "Contato", link: "/contato", isSelected: false },
     { title: "Grupo Simios", link: "/grupo-simios", isSelected: false },
   ];
 
   return(
     <>
-      <section className={`${ZillaFont.className} ${navBar} `}>
-        <div className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</div>
+      <header className={`${ZillaFont.className} ${navBar} `}>
+        <Link href="/" className={OngName}>ASSOCIAÇÃO ALIMENTANDO COM AMOR</Link>
         <nav className={ulnavBar} role="navigation" aria-label="Navegaçao do menu">
           
           {menuItems.map(({link, title},index)=>(
@@ -58,7 +58,7 @@ export default function NavBarTop(){
             
           ))}
         </nav>
-      </section>
+      </header>
     </>
   )
 }
