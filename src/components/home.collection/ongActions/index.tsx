@@ -1,7 +1,8 @@
-import { ZillaFont, outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
-export const OngActions = () => {
 
+import { ZillaFont, outfitFont } from "@/assets/fonts";
+
+const OngActions = () => {
   const headerActions = clsx("md:block md:text-center md:bg-white md:py-8");
   const containerActions = clsx(
     "flex gap-8 py-12 px-5 flex-col w-full bg-[#FFBF69]",
@@ -65,7 +66,7 @@ export const OngActions = () => {
               da Pátria e mulheres em situação de rua
             </p>
           </article>
-           {/* ...................... */}
+          {/* ...................... */}
 
 
           {/* ...................... */}
@@ -76,7 +77,7 @@ export const OngActions = () => {
               Até o momento temos
               <br /> conseguido:
             </span>
-            <ul role="list"  className={listActions}>
+            <ul role="list" className={listActions}>
               <li
                 className={`${outfitFont.className} ${listActionsItems} `}
               >
@@ -93,7 +94,7 @@ export const OngActions = () => {
           </article>
           {/* ...................... */}
 
-           {/* ...................... */}
+          {/* ...................... */}
           <article
             className={thirdBlockActions}>
             <span
@@ -112,7 +113,7 @@ export const OngActions = () => {
               atividades recreativas com vários rinquedos.
             </p>
           </article>
-           {/* ...................... */}
+          {/* ...................... */}
 
 
         </section>
@@ -120,3 +121,5 @@ export const OngActions = () => {
     </>
   );
 };
+
+export { OngActions };

@@ -1,10 +1,12 @@
 "use client"
+
 // exportaçoes de componentes
 import { HomeDesktop } from "../desktopHome";
 import { MobileHome } from "../mobile-home.colletion";
 import { AboutAlimentandoComAmor } from "../AboutAlimentandoComAmor";
 import { OngActions } from "../ongActions";
-export const Home = () => {
+
+const Home = () => {
   return (
     <>
       <MobileHome />
@@ -14,3 +16,5 @@ export const Home = () => {
     </>
   );
 };
+
+export { Home };

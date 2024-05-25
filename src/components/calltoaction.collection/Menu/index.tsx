@@ -1,13 +1,15 @@
 "use client";
 
-import { IoIosMenu } from "react-icons/io";
-import { IoClose } from "react-icons/io5";
-import { ZillaFont } from "@/assets/fonts";
 import { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 
-export function Menu() {
+import { IoIosMenu } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
+
+import { ZillaFont } from "@/assets/fonts";
+
+const Menu = () => {
   const [openMenu, setopenMenu] = useState(false);
 
   const ContainerMenu = clsx(
@@ -111,3 +113,5 @@ export function Menu() {
     </div>
   );
 }
+
+export { Menu };

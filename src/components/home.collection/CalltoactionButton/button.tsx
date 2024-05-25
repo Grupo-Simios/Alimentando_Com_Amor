@@ -1,15 +1,8 @@
-import { outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
-import { ComponentProps, ReactNode } from "react";
 
+import { IButtonProps } from "./types";
 
-interface IButtonProps extends ComponentProps<"button"> {
-  children: ReactNode;
-  backGround?: string;
-  isCliped?:string;
-}
-
-export default function Button({
+function Button({
   children,
   backGround,
   className,
@@ -33,12 +26,12 @@ export default function Button({
     },
     {
       "bg-green-500 h-12 w-64 text-center grid place-content-center hover:bg-green-600 text-[#edfaee] rounded-lg cursor-pointer font-bold":
-       isCliped === "key",
+        isCliped === "key",
     },
-  
-   
 
- 
+
+
+
   );
 
   return (
@@ -47,3 +40,5 @@ export default function Button({
     </button>
   );
 }
+
+export default Button;

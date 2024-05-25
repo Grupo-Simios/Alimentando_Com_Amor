@@ -1,15 +1,17 @@
 "use client";
+
+import clsx from "clsx";
 import Head from "next/head";
+
 import { AboutSimios } from "@/components/simios.collection/aboutSimios";
 import { AboutProject } from "@/components/simios.collection/aboutProject";
 import { Organizers } from "@/components/simios.collection/organizers";
 import { Team } from "@/components/simios.collection/team";
 import Header from "@/components/headerMobile/header";
-import clsx from "clsx";
 import { ZillaFont } from "@/assets/fonts";
 import { outfitFont } from "@/assets/fonts";
 
-export default function Simios() {
+function Simios() {
   const Container = clsx(
     "flex flex-col justify-center items-center gap-14 px-5",
     "max-[300px]:gap-8 max-[300px]:px-2 md:w-[60%] md:ml-auto md:mr-auto"
@@ -93,3 +95,5 @@ export default function Simios() {
     </>
   );
 }
+
+export default Simios;

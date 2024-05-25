@@ -1,7 +1,8 @@
-import { outfitFont } from "@/assets/fonts";
 import clsx from "clsx";
 
-export const WhatWeDo = () => {
+import { outfitFont } from "@/assets/fonts";
+
+const WhatWeDo = () => {
   const ContainerWhatWeDo = clsx(
     /* Base styles */
     `flex py-4 w-[90%] mt-32 flex-col border-4 border-[#1b1b1bcc] items-center gap-4`,
@@ -26,3 +27,5 @@ export const WhatWeDo = () => {
     </div>
   );
 };
+
+export { WhatWeDo }; 

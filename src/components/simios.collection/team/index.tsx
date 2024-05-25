@@ -1,12 +1,13 @@
 "use client";
-import Title from "@/components/titles/title";
-import { ZillaFont } from "@/assets/fonts";
-import { Members } from "@/components/organizers.collectiion/organizers";
-import { simiosTeam } from "@/models/urlImgSwiper.model";
-import { Iprofile } from "@/components/organizers.collectiion/organizers";
+
 import clsx from "clsx";
 
-export const Team = () => {
+import { ZillaFont } from "@/assets/fonts";
+import Title from "@/components/titles/title";
+import { Members } from "@/components/organizers.collectiion/organizers";
+import { simiosTeam } from "@/models/urlImgSwiper.model";
+
+const Team = () => {
   const Container = clsx("flex flex-col w-full gap-10 flex-wrap");
 
   const subTitle = clsx(
@@ -25,7 +26,7 @@ export const Team = () => {
       md:max-w-full
       ">
 
-      {FilterDevelepers.map(
+        {FilterDevelepers.map(
           ({ name, github, image, linkedin, mainFunction }, index) => (
             <Members
               key={index}
@@ -42,3 +43,5 @@ export const Team = () => {
     </section>
   );
 };
+
+export { Team };

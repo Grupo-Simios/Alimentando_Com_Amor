@@ -59,18 +59,13 @@
 .swiper-pagination {
   position: relative !important;
   margin-top: 1rem !important;
-  
 }
 
 .swiper-pagination-bullet {
- 
   position: relative;
   padding: 0.4rem;
   background-color: #ff9f1c !important;
-  
-  
 }
-
 
 .bannerHeroHome{
   background-image: url("https://i.imgur.com/FftRScY.png");

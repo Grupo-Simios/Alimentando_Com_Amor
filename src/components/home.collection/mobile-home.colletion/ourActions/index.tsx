@@ -1,12 +1,13 @@
-import { ZillaFont, outfitFont } from "@/assets/fonts";
-import { FaArrowTurnDown } from "react-icons/fa6";
 import Link from "next/link";
 import clsx from "clsx";
 
-export const Actions = () => {
+import { FaArrowTurnDown } from "react-icons/fa6";
+
+import { ZillaFont, outfitFont } from "@/assets/fonts";
+
+const Actions = () => {
   const OurActions = clsx(
     /* Base styles */
-
     "flex flex-col h-full mb-14 gap-10 w-full justify-around items-center"
   );
 
@@ -15,7 +16,6 @@ export const Actions = () => {
     `${ZillaFont.className} text-xl leading-6 font-normal flex w-[90%] text-center justify-center`,
 
     /* Width change styles */
-
     `max-[230px]:text-sm`
   );
 
@@ -93,3 +93,5 @@ export const Actions = () => {
     </article>
   );
 };
+
+export { Actions };
