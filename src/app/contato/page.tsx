@@ -2,9 +2,9 @@
 
 import clsx from "clsx";
 
-import { PhonesContacts } from "@/components/contact.collection/phones";
-import LocationMap from "@/components/contact.collection/location";
-import Header from "@/components/headerMobile/header";
+import { PhonesContacts } from "@/components/Contact/phones";
+import LocationMap from "@/components/Contact/location";
+import Header from "@/components/Header/header";
 
 function Contact() {
 

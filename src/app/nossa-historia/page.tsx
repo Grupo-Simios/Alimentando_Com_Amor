@@ -1,9 +1,9 @@
 import clsx from "clsx";
 
-import Header from "@/components/headerMobile/header";
-import { AboutUsOurHistory } from "@/components/ourHistory.collection/aboutUs";
-import { ContainerDonationOurHistory } from "@/components/ourHistory.collection/containerDonation/";
-import { OurGoalsOurHistory } from "@/components/ourHistory.collection/ourGoals";
+import Header from "@/components/Header/header";
+import { AboutUsOurHistory } from "@/components/ourHistory/aboutUs";
+import { ContainerDonationOurHistory } from "@/components/ourHistory/containerDonation";
+import { OurGoalsOurHistory } from "@/components/ourHistory/ourGoals";
 
 function OurHistory() {
   const ContainerOurHistory = clsx(

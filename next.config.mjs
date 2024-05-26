@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["api.qrserver.com", "i.imgur.com"],
+    remotePatterns: [
+      { protocol: "https", hostname: "api.qrserver.com" },
+      { protocol: "http", hostname: "api.qrserver.com" },
+      { protocol: "https", hostname: "i.imgur.com" },
+      { protocol: "http", hostname: "i.imgur.com" },
+    ],
   },
 };
 

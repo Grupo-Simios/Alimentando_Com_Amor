@@ -1,8 +1,8 @@
 import "./globals.css";
 
 //componente Export
-import NavBarTop from "../components/nav-bar.collection/nav-bar";
-import { FooterMobile } from "@/components/footer.collection/footer/mobile";
+import Header from "../components/Navbar";
+import { FooterMobile } from "@/components/Footer";
 
 function RootLayout({
   children,
@@ -40,8 +40,8 @@ function RootLayout({
           <meta name="twitter:image" content="https://i.imgur.com/HYDqNfe.png" />
           {/* End Twitter Metatags */}
         </head>
-        <body className="h-full min-h-screen">
-          <NavBarTop />
+        <body className="bg-[#F9F6EE]">
+          <Header />
           {children}
           <FooterMobile />
         </body>

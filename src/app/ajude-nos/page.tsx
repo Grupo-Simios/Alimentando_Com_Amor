@@ -1,7 +1,7 @@
 "use client";
 
-import clsx from "clsx";
 import { useState } from "react";
+import clsx from "clsx";
 import Link from "next/link";
 import Image from "next/image";
 import QRCode from "qrcode.react";
@@ -9,10 +9,10 @@ import QRCode from "qrcode.react";
 import { Copy } from "lucide-react";
 
 import { outfitFont } from "@/assets/fonts";
-import Paragraph from "@/components/home.collection/paragraph/paragraph";
+import Paragraph from "@/components/Home/paragraph/paragraph";
 import ParagraphSection from "@/components/sectionParagraph/sectionParagraph";
-import Header from "@/components/headerMobile/header";
-import Button from "@/components/home.collection/CalltoactionButton/button";
+import Header from "@/components/Header/header";
+import Button from "@/components/Home/CalltoactionButton/button";
 import { bankDetails, contactDetails } from "@/models/ongdetails";
 
 function HelpUs() {
@@ -21,7 +21,6 @@ function HelpUs() {
   const copyClipboard = (currentCLiped) => {
     navigator.clipboard
       .writeText(currentCLiped)
-      .then(() => console.log("Copiada"));
 
     if (currentCLiped === bankDetails.CNPJ) setIscopy("cnpj");
     else if (currentCLiped === bankDetails.key) setIscopy("key");
@@ -33,11 +32,11 @@ function HelpUs() {
   };
 
   const titleHelpUs = clsx(
-    "text-2xl leading-7 p-1 text-center  border-b-[2px] w-full border-[#FF9F1C]",
-    " max-[245px]:text-base max-[210px]:text-sm max-[175px]:text-[10px] max-[175px]:font-bold"
+    "text-2xl leading-7 p-1 text-center border-b-[2px] w-full border-[#FF9F1C]",
+    "max-[245px]:text-base max-[210px]:text-sm max-[175px]:text-[10px] max-[175px]:font-bold"
   );
 
-  // .....................Container qr Code.....................................
+  // .....................Container qr Code.............................
   const BankDetailsContainer = clsx(
     `w-[80%] ml-auto mr-auto`,
     `xsm:w-[80%]`,
@@ -106,7 +105,7 @@ function HelpUs() {
           </Paragraph>
         </section>
 
-        <Link href={contactDetails.formsLink} target="_blanck" aria-label="Link para a Pagina de Voluntários">
+        <Link href={contactDetails.formsLink} target="_blank" aria-label="Link para a Pagina de Voluntários">
           <Button backGround="primary">Quero ser voluntário</Button>
         </Link>
 
@@ -124,7 +123,7 @@ function HelpUs() {
           </ParagraphSection>
         </section>
 
-        {/* ............QRCODEAREA............ */}
+        {/* ............QR CODE AREA............ */}
         <section className={mainContainer}>
           <article className={qrCodeContainer}>
             <div className="flex flex-col items-center justify-center w-[40%] gap-8">
@@ -174,7 +173,6 @@ function HelpUs() {
               <h2 className={subtitleDetails}>Chave Pix CNPJ:</h2>
               <p className={`${titleDetails} flex gap-4 items-center`}>
                 <span className={isCopy === "cnpj" ? "font-extrabold" : ""}>
-                  {" "}
                   {bankDetails.CNPJ}
                 </span>
 

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import Paragraph from "../home.collection/paragraph/paragraph"
+import Paragraph from "../Home/paragraph/paragraph"
 import { ZillaFont } from "@/assets/fonts";
 import { IParagraphProps } from "./types";
 

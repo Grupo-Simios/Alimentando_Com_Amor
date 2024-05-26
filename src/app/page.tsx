@@ -1,6 +1,6 @@
 import "./globals.css";
 // components exports
-import { Home } from "../components/home.collection/heroBanner";
+import { Home } from "../components/Home/heroBanner";
 
 function Page() {
   return (
