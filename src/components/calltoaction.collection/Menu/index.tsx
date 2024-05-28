@@ -106,7 +106,7 @@ export function Menu() {
           </nav>
         </div>
       ) : (
-        <div></div>
+        <></>
       )}
     </div>
   );
