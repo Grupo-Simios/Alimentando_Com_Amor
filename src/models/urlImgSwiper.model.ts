@@ -114,7 +114,7 @@ export const simiosTeam = [
     image: "https://i.imgur.com/gSFj3OM.png",
     name: "João Gabriel",
     github: "https://github.com/JoaoGabsSR",
-    linkedin: "www.linkedin.com/in/joão-gabriel-34a70519a",
+    linkedin: "https://www.linkedin.com/in/joão-gabriel-34a70519a",
     mainFunction: "Desenvolvedor",
     adm: false,
   },
