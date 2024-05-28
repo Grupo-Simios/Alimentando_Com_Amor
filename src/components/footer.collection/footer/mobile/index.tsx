@@ -14,8 +14,9 @@ export const FooterMobile = () => {
 )
 
 const footerMain = clsx(
-  'flex bg-[#1b1b1bCC] gap-6 w-full flex-col pb-10',
-  'lg:flex-row-reverse lg:py-10 lg:bg-navbar-Yellow'
+  'flex bg-[#1b1b1bCC] gap-6 max-w-full flex-col pb-10',
+  'lg:flex-row-reverse lg:py-10 lg:bg-navbar-Yellow',
+  '2xl:px-[200px]'
   
   
 )

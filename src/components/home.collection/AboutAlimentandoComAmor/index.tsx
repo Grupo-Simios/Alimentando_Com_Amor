@@ -36,7 +36,8 @@ export const AboutAlimentandoComAmor = () =>{
 
   const heroArticleContainer = clsx(
     "flex w-full flex-col gap-5 bg-[#F9F6EE]",
-    "md:w-[45%] ml-auto mr-auto "
+    "md:w-[45%] ml-auto mr-auto ",
+    '1xl:w-[35%] ml-auto mr-auto'
   
   )
   return(

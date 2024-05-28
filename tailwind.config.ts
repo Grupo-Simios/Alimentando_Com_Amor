@@ -44,6 +44,7 @@ const config: Config = {
       'xl': '1280px',
       '1xl' : '1366px',
       '2xl': '1536px',
+      'extra-screen' : "1920px"
     },
  
    

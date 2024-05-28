@@ -11,7 +11,7 @@ export const HomeDesktop = () =>{
     'max-md:hidden'
   )
   const bannerHeroHome = clsx(
-    'md:h-[609px] w-screen',
+    'md:h-[609px] max-w-full overflow-hidden',
     'lg:h-[609px]',
     `w-screen`
   )

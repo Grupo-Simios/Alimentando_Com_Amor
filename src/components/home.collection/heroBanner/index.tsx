@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // exportaçoes de componentes
 import { HomeDesktop } from "../desktopHome";
 import { MobileHome } from "../mobile-home.colletion";
@@ -7,10 +7,12 @@ import { OngActions } from "../ongActions";
 export const Home = () => {
   return (
     <>
-      <MobileHome />
+    
+     <MobileHome />
       <HomeDesktop />
       <OngActions />
       <AboutAlimentandoComAmor />
+    
     </>
   );
 };
